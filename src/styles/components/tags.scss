@@ -1,0 +1,14 @@
+.tags {
+  margin-top: 1rem;
+  width: 20rem;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    background-color: lightblue;
+    border-radius: 0.6rem;
+    padding: 0.5rem 1.4rem;
+    margin: 1rem;
+    border: none;
+  }
+}
