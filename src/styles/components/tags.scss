@@ -1,14 +1,31 @@
 .tags {
   margin-top: 1rem;
-  width: 20rem;
-  border: 1px solid black;
+  border: 1px solid;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 0.3rem;
+
   &__item {
-    background-color: lightblue;
+    font-weight: 700;
+    background-color: $yellow;
     border-radius: 0.6rem;
-    padding: 0.5rem 1.4rem;
-    margin: 1rem;
-    border: none;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    flex-basis: 3rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+
+    &:hover {
+      background-color: rgba(255, 166, 0, 0.575);
+    }
+
+    &:nth-child(odd) {
+      flex-grow: 2;
+      background-color: $orange;
+      &:hover {
+        background-color: rgba(255, 166, 0, 0.596);
+      }
+    }
   }
 }

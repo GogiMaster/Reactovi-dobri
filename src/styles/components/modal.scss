@@ -1,63 +1,49 @@
 .modal {
-  position: absolute;
-  background-color: white;
+  position: fixed;
+  background-color: $white;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin: 0 auto;
-  border: 1px solid;
   text-align: center;
   width: 30rem;
-  transition: 2s;
   border: none;
-  padding: .5rem;
-  border-radius: .5rem;
-  
-  &__btn {
-    background-color: rgb(122, 185, 206);
-    border: none;
-    padding: 0.4rem 1rem;
-    font-size: 1rem;
-    border-radius: 0.6rem;
-    cursor: pointer;
-    color: white;
-    
-    &:hover{
-      border: 1px solid black;
-      background-color: rgb(225, 228, 226);
-      color: black;
-    }
-  }
-  &__content {
-    font-family: $font;
-  }
-  &__close {
-    margin-bottom: 1rem;
-    border: none;
-    background-color: transparent;
-    padding: 0.3rem;
-    font-size: large;
-    text-transform: uppercase;
-    cursor: pointer;
-    &:hover {
-      transition: background-color 0.4s;
-      background-color: turquoise;
-    }
-  }
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
   &__overlay {
     background-color: rgba(97, 97, 97, 0.788);
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0rem;
-    z-index: 0;
+    left: 0;
   }
-}
-.page {
-  text-align: center;
-  margin: 1rem 1rem;
-  width: 22rem;
-  padding: 1rem;
-  border: 1px solid;
-  height: 4rem;
+
+  &__header {
+    background-color: $white;
+  }
+
+  &__main {
+    background-color: $white;
+  }
+
+  &__fotter {
+    background-color: $white;
+    margin: 1rem;
+  }
+  &__btn {
+    background-color: $white;
+    border: 1px solid black;
+    padding: 0.3rem 0.9rem;
+    border-radius: 0.3rem;
+    font-size: large;
+    color: $orange;
+    cursor: pointer;
+
+    &:hover {
+      background-color: black;
+      color: $white;
+      transition: 300ms;
+    }
+  }
 }

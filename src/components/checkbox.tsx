@@ -1,10 +1,10 @@
 const Checkbox = () => {
   return (
-    <div>
-      <form className="checkbox">
-        <input type="checkbox" value="bike" />
-        <label>Ja imam bicikli</label>
-      </form>
+    <div className="checkbox__wrapper">
+      <input className="input" type="checkbox" value="bike" id="bike" />
+      <label className="label" htmlFor="bike">
+        Ja imam bicikli
+      </label>
     </div>
   );
 };

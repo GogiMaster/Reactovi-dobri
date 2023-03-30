@@ -1,0 +1,23 @@
+.form {
+  .label {
+    display: block;
+    font-family: $font;
+    font-size: 2rem;
+  }
+
+  .input {
+    padding: 1rem;
+    border: 3px solid black;
+    transition: all 0.2s ease-out;
+    font-size: large;
+
+    &:focus {
+      outline: none;
+      border: 3px solid $blue;
+    }
+  }
+  .validation {
+    font-size: large;
+    color: $red;
+  }
+}

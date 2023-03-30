@@ -1,38 +1,48 @@
-import { useState } from "react";
 import Button from "./components/button";
 import Checkbox from "./components/checkbox";
-import Form from "./components/form";
+import FormField from "./components/form-field";
 import Header from "./components/header";
 import Modal from "./components/modal";
-import Navigation from "./components/navigation";
 import Paginacija from "./components/paginacija";
 import Tags from "./components/tags";
 import "./styles/styles.scss";
 
 const App = () => {
- 
-  const [modul, setModul] =useState(false)
-  const toggle=()=>{
-    setModul(!modul)
-  }
-  const ludi=[
-    {title:'josko' ,desc:222}
-  ]
-  
   return (
-    <div className="App">     
+    <div className="App">
       <Header />
-      <Modal />
-      <Button />
-      <Checkbox />
-      <Form />
-      <Paginacija />
-      <Tags /> 
-        <button onClick={toggle}>Otvori modul</button>
-        {modul ? (<>
-        <div>{ludi.map(item =>
-          <div>{item.title}{item.desc}</div> )}</div>
-        </>):''}
+      <div className="container">
+        <div className="container__item">
+          <h1>BUTTON</h1>
+          <Button />
+        </div>
+        <hr />
+        <div className="container__item">
+          <h1>CHECKBOX</h1>
+          <Checkbox />
+        </div>
+        <hr />
+        <div className="container__item">
+          <h1>FORM FIELD</h1>
+          <FormField />
+        </div>
+        <hr />
+        <div className="container__item">
+          <h1>PAGINACIJA</h1>
+          <Paginacija />
+        </div>
+        <hr />
+        <div className="container__item">
+          <h1>TAGS</h1>
+          <Tags />
+        </div>
+        <hr />
+        <div className="container__item">
+          <h1>MODAL</h1>
+          <Modal />
+          <hr />
+        </div>
+      </div>
     </div>
   );
 };
