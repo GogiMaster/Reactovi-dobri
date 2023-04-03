@@ -1,17 +1,17 @@
 const FormField = () => {
   return (
-    <div className="form">
-      <label className="form__label" htmlFor="form">
+    <div className="form-field">
+      <label className="form-field__label" htmlFor="form">
         Label
       </label>
       <input
-        className="form__input"
+        className="form-field__input"
         type="text"
         placeholder="Placeholder"
         id="form"
         required
       />
-      <p className="form__validation">Validation Message</p>
+      <p className="form-field__validation">Validation Message</p>
     </div>
   );
 };
