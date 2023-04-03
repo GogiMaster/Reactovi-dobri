@@ -16,6 +16,7 @@ const Modal = () => {
           <div className="modal">
             <div className="modal__header">
               <h2>Title</h2>
+              <h2 onClick={toggleModal} className="modal__header__close">&#88;</h2>
             </div>
             <div className="modal__main">
               <p>
@@ -37,9 +38,7 @@ const Modal = () => {
             </div>
           </div>
         </>
-      ) : (
-        ""
-      )}
+      ) : (        ""     )}
 
       <button className="modal__btn" onClick={toggleModal}>
         OPEN

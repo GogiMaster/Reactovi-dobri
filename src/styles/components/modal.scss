@@ -21,6 +21,21 @@
 
   &__header {
     background-color: $white;
+
+    &__close{
+      cursor: pointer;
+      position: absolute;
+      right: .5rem ;
+      top: -.8rem;
+      padding: 0 .5rem;
+      border-radius: .3rem;
+
+      &:hover{
+        background-color: $black;
+        color: $white;
+        transition: 150ms;
+      }
+    }
   }
 
   &__main {
@@ -33,7 +48,7 @@
   }
   &__btn {
     background-color: $white;
-    border: 1px solid black;
+    border: 1px solid $black;
     padding: 0.3rem 0.9rem;
     border-radius: 0.3rem;
     font-size: large;
@@ -41,7 +56,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: black;
+      background-color: $black;
       color: $white;
       transition: 300ms;
     }
