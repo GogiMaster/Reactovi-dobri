@@ -1,10 +1,12 @@
 import Button from "./components/button";
 import Checkbox from "./components/checkbox";
 import FormField from "./components/form-field";
+import FlexExe from "./components/flexExe";
 import Header from "./components/header";
 import Modal from "./components/modal";
 import Paginacija from "./components/paginacija";
 import Tags from "./components/tags";
+import TransformExe from "./components/transformExe";
 import "./styles/styles.scss";
 
 const App = () => {
@@ -40,6 +42,16 @@ const App = () => {
         <div className="container__item">
           <h1>MODAL</h1>
           <Modal />
+          <hr />
+        </div>
+        <div className="container__item">
+          <h1>TRANSFORM</h1>
+          <TransformExe />
+          <hr />
+        </div>
+        <div className="container__item">
+          <h1>FLEX</h1>
+          <FlexExe />
           <hr />
         </div>
       </div>

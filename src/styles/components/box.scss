@@ -1,0 +1,51 @@
+.box {
+  margin: 1rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: $yellow;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 500ms ease;
+
+  &--active {
+    transform: scale(0.5);
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &--translate {
+    &:hover {
+      transform: translate3d(-5rem, -5rem, 0);
+    }
+  }
+
+  &--rotate {
+    &:hover {
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+
+  &--scale {
+    &:hover {
+      transform: scale3d(1.3, 1.3, 1.3);
+    }
+  }
+
+  &--skew {
+    &:hover {
+      transform: skew(45deg, 90deg);
+    }
+  }
+
+  &--chaos {
+    &:hover {
+      transform: translate3d(4rem, -30rem, 0rem) rotate3d(0, 0, 1, 45deg)
+        scale3d(2, 4, 1);
+    }
+  }
+}

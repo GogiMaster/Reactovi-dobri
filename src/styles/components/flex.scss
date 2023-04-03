@@ -1,0 +1,54 @@
+.flex {
+  border: 1px solid $black;
+  padding: 0.1rem;
+  display: flex;
+  margin: 1rem;
+  border-radius: 0.5rem;
+
+  &__first {
+    display: flex;
+    justify-content: space-between;
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo {
+      margin: 1rem;
+      width: 5rem;
+    }
+  }
+  &__second {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  &__third {
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  & p {
+    font-size: 2rem;
+  }
+}
+
+//novi red
+
+.card {
+  &__wrapper {
+    display: flex;
+    flex-grow: 1;
+  }
+  align-items: stretch;
+  margin: 3rem;
+  flex: 1;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__grow {
+    flex-grow: 2;
+  }
+}
