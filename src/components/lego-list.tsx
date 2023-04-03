@@ -22,17 +22,17 @@ const legoSetovi =[
   }
 ];
 
-const Navigation = () => {
+const LegoList = () => {
   return <>
     {legoSetovi.map(item=> 
       <>
       <tr >
-        <td className="lego__lista">{item.title}</td>      
-        <td className="lego__lista">{item.desc}</td>
+        <td className="lego__list__col">{item.title}</td>      
+        <td className="lego__list__col">{item.desc}</td>
       </tr>
         </>
       )}
   </>;
 };
 
-export default Navigation;
+export default LegoList;

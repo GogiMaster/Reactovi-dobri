@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navigation from "./navigation";
+import LegoList from "./lego-list";
 
 const Modal = () => {
   const [modal, setModal] = useState(false);
@@ -27,8 +27,8 @@ const Modal = () => {
                 quas. Rem nemo aperiam quaerat necessitatibus tenetur reiciendis
                 ex, recusandae alias cumque quos unde quod magnam ea sapiente.
               </p>
-              <table className="lego">
-                <Navigation />
+              <table className="lego__list">
+                <LegoList />
               </table>
             </div>
             <div className="modal__fotter">
