@@ -15,8 +15,7 @@
     }
 
     &__logo {
-      margin: 1rem;
-      width: 5rem;
+      width: 30px;
     }
   }
   &__second {
@@ -44,9 +43,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
   }
-  
+
   border: 1px solid;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -55,15 +54,13 @@
     flex-grow: 1;
   }
 
-  &__fotter{
-
-    &__btn{
+  &__fotter {
+    &__btn {
       width: 100%;
       background-color: $yellow;
       border: none;
-      border-bottom-left-radius: .5rem;
-      border-bottom-right-radius: .5rem;
-
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
     }
   }
 }

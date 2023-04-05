@@ -1,14 +1,55 @@
+@keyframes anima {
+  0% {
+    transform: translate3d(0px, 50px, 0px);
+  }
+  20% {
+    transform: translate3d(50px, 50px, 0px);
+  }
+  40% {
+    transform: translate3d(50px, -50px, 0px);
+  }
+  60% {
+    transform: translate3d(-50px, -50px, 0px);
+  }
+  80% {
+    transform: translate3d(-50px, 50px, 0px);
+  }
+  100% {
+    transform: translate3d(50px, 50px, 0px);
+  }
+}
 .btn {
   background-color: $white;
   padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
   font-size: large;
   border-radius: 0.3rem;
   color: $orange;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 
   &:hover {
     background-color: $black;
     color: $white;
     transition: 300ms;
+  }
+
+  //colors
+  &--red {
+    background-color: $red;
+  }
+  &--green {
+    background-color: $green;
+  }
+  &--yellow {
+    background-color: $yellow;
+  }
+
+  &--animate {
+    &:active {
+      animation: anima 2s linear infinite alternate;
+    }
   }
 }

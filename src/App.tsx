@@ -3,11 +3,14 @@ import Checkbox from "./components/checkbox";
 import FormField from "./components/form-field";
 import FlexExe from "./components/flexExe";
 import Header from "./components/header";
+import Input from "./components/input";
 import Modal from "./components/modal";
 import Paginacija from "./components/paginacija";
 import Tags from "./components/tags";
 import TransformExe from "./components/transformExe";
 import "./styles/styles.scss";
+//icon
+import IconEdit from "./assets/IconEdit";
 
 const App = () => {
   return (
@@ -15,8 +18,13 @@ const App = () => {
       <Header />
       <div className="container">
         <div className="container__item">
+          <h1>Input</h1>
+          <Input rounded validation="jfajajaffj" />
+          <Input label="first name" />
+          <hr />
           <h1>BUTTON</h1>
-          <Button />
+          <Button animate={true} value="KLIK" />
+          <Button animate={true} icon={<IconEdit />} color="red" />
         </div>
         <hr />
         <div className="container__item">
