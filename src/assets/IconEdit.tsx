@@ -1,3 +1,4 @@
+
 const IconEdit = () => {
   return (
     <div>
@@ -7,7 +8,7 @@ const IconEdit = () => {
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
-        stroke="currentColor"
+        stroke="yellow"
       >
         <path
           stroke-linecap="round"

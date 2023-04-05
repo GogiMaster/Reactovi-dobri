@@ -38,17 +38,32 @@
 
 .card {
   &__wrapper {
-    display: flex;
-    flex-grow: 1;
+    border: 1px solid;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
   }
-  align-items: stretch;
-  margin: 3rem;
-  flex: 1;
+  
   border: 1px solid;
+  border-radius: .5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  &__grow {
-    flex-grow: 2;
+  text-align: center;
+
+  &__main {
+    flex-grow: 1;
+  }
+
+  &__fotter{
+
+    &__btn{
+      width: 100%;
+      background-color: $yellow;
+      border: none;
+      border-bottom-left-radius: .5rem;
+      border-bottom-right-radius: .5rem;
+
+    }
   }
 }

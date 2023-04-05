@@ -26,7 +26,6 @@ const FlexExe = () => {
       <h1>CARDS</h1>
       <div className="card__wrapper">
         <div className="card card__grow">
-          <div className="card__top">
             <div className="card__header">
               <h1>Title</h1>
             </div>
@@ -37,13 +36,11 @@ const FlexExe = () => {
                 repudiandae quasi aliquam natus.
               </p>
             </div>
-          </div>
           <div className="card__fotter">
-            <button>TEXT</button>
+            <button className="card__fotter__btn">TEXT</button>
           </div>
         </div>
         <div className="card card__grow">
-          <div className="card__top">
             <div className="card__header">
               <h1>Title</h1>
             </div>
@@ -53,22 +50,19 @@ const FlexExe = () => {
                 molestiae
               </p>
             </div>
-          </div>
           <div className="card__fotter">
-            <button>TEXT</button>
+            <button className="card__fotter__btn">TEXT</button>
           </div>
         </div>
         <div className="card card__grow">
-          <div className="card__top">
             <div className="card__header">
               <h1>Title</h1>
             </div>
             <div className="card__main">
               <p>Lorem ipsum dolor, sit am</p>
             </div>
-          </div>
           <div className="card__fotter">
-            <button>TEXT</button>
+            <button className="card__fotter__btn">TEXT</button>
           </div>
         </div>
       </div>
