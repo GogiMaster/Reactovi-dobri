@@ -19,8 +19,9 @@ const App = () => {
       <div className="container">
         <div className="container__item">
           <h1>Input</h1>
-          <Input rounded validation="jfajajaffj" />
-          <Input label="first name" />
+          <Input  />
+          <Input focus/>
+          <Input  rounded/>
           <hr />
           <h1>BUTTON</h1>
           <Button animate={true} value="KLIK" />

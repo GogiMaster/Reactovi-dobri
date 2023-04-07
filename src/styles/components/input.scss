@@ -8,9 +8,16 @@
     border-radius: 1.5rem;
     border: 1px solid $yellow;
   }
+  &--focused{
+    outline: none;
+    border: 1px solid $green;
+  }
 }
 .validation {
   &--true {
-    color: blue;
+    color:$green;
+  }
+  &--false{
+    color: $red;
   }
 }
