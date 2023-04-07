@@ -29,6 +29,11 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
+  @media (min-width: $media-md) {
+    width: unset;
+  }
 
   &:hover {
     background-color: $black;

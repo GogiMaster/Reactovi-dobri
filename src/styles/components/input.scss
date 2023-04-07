@@ -3,21 +3,26 @@
   border: 1px solid $black;
   display: block;
   margin: 1rem;
+  width: 100%;
+
+  @media (min-width: $media-md) {
+    width: 15rem;
+  }
 
   &--rounded {
     border-radius: 1.5rem;
     border: 1px solid $yellow;
   }
-  &--focused{
+  &--focused {
     outline: none;
     border: 1px solid $green;
   }
 }
 .validation {
   &--true {
-    color:$green;
+    color: $green;
   }
-  &--false{
+  &--false {
     color: $red;
   }
 }

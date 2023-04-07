@@ -1,8 +1,10 @@
 .header {
+  position: fixed;
+  top: 0;
   background-color: $yellow;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  flex-wrap: wrap;
   padding-right: 1rem;
   &__logo {
     width: 5%;

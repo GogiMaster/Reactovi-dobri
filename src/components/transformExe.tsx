@@ -30,18 +30,18 @@ const transformExe = () => {
           <div className="box box--skew"></div>
         </div>
 
-        <div className="box__chaos">
-          <h4>Haos</h4>
-          <div className="box box--chaos"></div>
-        </div>
-      </div>
-      <div className="box__toggle">
-        <h4>Click</h4>
+        <div className="box__toggle">
+          <div className="box__chaos">
+            <h4>Haos</h4>
+            <div className="box box--chaos"></div>
+          </div>
+          <h4>Click</h4>
 
-        <div
-          onClick={toggleScale}
-          className={`box box--${scale ? "active" : "inactive"}`}
-        ></div>
+          <div
+            onClick={toggleScale}
+            className={`box box--${scale ? "active" : "inactive"}`}
+          ></div>
+        </div>
       </div>
     </>
   );

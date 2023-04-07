@@ -1,4 +1,5 @@
 import Button from "./components/button";
+import Card from "./components/card";
 import Checkbox from "./components/checkbox";
 import FormField from "./components/form-field";
 import FlexExe from "./components/flexExe";
@@ -11,6 +12,7 @@ import TransformExe from "./components/transformExe";
 import "./styles/styles.scss";
 //icon
 import IconEdit from "./assets/IconEdit";
+import Img from "./assets/img";
 
 const App = () => {
   return (
@@ -19,9 +21,9 @@ const App = () => {
       <div className="container">
         <div className="container__item">
           <h1>Input</h1>
-          <Input  />
-          <Input focus/>
-          <Input  rounded/>
+          <Input />
+          <Input validation="bobobo" />
+          <Input rounded />
           <hr />
           <h1>BUTTON</h1>
           <Button animate={true} value="KLIK" />
@@ -61,6 +63,17 @@ const App = () => {
         <div className="container__item">
           <h1>FLEX</h1>
           <FlexExe />
+          <hr />
+        </div>
+        <div className="container__item">
+          <h1>CARD</h1>
+          <div className="cards__container">
+            <Card title="POGLAVLJE" desc="fafaf" img={<Img />} />
+            <Card title="ODLOMAK" desc="Ja nisam nitko i nista" img={<Img />} />
+            <Card title="NASLOV" img={<Img />} />
+            <Card title="NASLOVCI" img={<Img />} />
+          </div>
+
           <hr />
         </div>
       </div>

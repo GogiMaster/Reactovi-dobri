@@ -7,12 +7,24 @@
   cursor: pointer;
   transition: all 500ms ease;
 
-  &--active {
-    transform: scale(0.5);
-  }
-
   &__container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+    @media (min-width: $media-md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $media-xl) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &--active {
+    transform: scale(0.5);
   }
 
   &--translate {

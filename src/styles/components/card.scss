@@ -1,0 +1,54 @@
+.cards {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid $black;
+  flex-grow: 1;
+
+  &__container {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media (min-width: $media-sm) {
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: $media-lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: $media-xl) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    &__p {
+      flex-grow: 1;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__fotter {
+    padding: 0.5rem;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+
+    &__btn {
+      transition: all 250ms;
+      border: 1px solid $black;
+      background-color: $white;
+      color: $orange;
+      font-size: 1.3rem;
+      width: 100%;
+      margin: 0.5rem;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}
