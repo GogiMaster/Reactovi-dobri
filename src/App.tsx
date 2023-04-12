@@ -10,9 +10,11 @@ import Paginacija from "./components/paginacija";
 import Tags from "./components/tags";
 import TransformExe from "./components/transformExe";
 import "./styles/styles.scss";
-//icon
+//icons
 import IconEdit from "./assets/IconEdit";
 import Img from "./assets/img";
+import GridExe from "./components/premier-card";
+import PremierCard from "./components/premier-card";
 
 const App = () => {
   return (
@@ -68,12 +70,31 @@ const App = () => {
         <div className="container__item">
           <h1>CARD</h1>
           <div className="cards__container">
-            <Card title="POGLAVLJE" desc="fafafaaaaaaaaa sas  a fa fas af ahuioahuifahuahwu ihaiu h" img={<Img />} />
+            <Card
+              title="POGLAVLJE"
+              desc="fafafaaaaaaaaa sas  a fa fas af ahuioahuifahuahwu ihaiu h"
+              img={<Img />}
+            />
             <Card title="ODLOMAK" desc="Ja nisam nitko i nista" img={<Img />} />
             <Card title="NASLOV" img={<Img />} />
             <Card title="NASLOVCI" img={<Img />} />
           </div>
+          <hr />
 
+          <div className="grid__container">
+            <PremierCard
+              titleDesc="Premier League"
+              points={1000}
+              enter={1452}
+            />
+            <PremierCard
+              points={999}
+              title="GAME 19"
+              titleDesc="Bundesleague"
+            />
+            <PremierCard />
+            <PremierCard />
+          </div>
           <hr />
         </div>
       </div>

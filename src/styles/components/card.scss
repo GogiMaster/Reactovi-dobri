@@ -6,12 +6,12 @@
   &__container {
     gap: 1rem;
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     width: 25%;
 
     @media (min-width: $media-sm) {
     }
-    
+
     @media (min-width: $media-md) {
       grid-template-columns: 1fr 1fr;
     }
@@ -22,6 +22,7 @@
   }
 
   &__main {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     &__p {
