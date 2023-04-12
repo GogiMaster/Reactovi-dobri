@@ -68,7 +68,7 @@ const App = () => {
         <div className="container__item">
           <h1>CARD</h1>
           <div className="cards__container">
-            <Card title="POGLAVLJE" desc="fafaf" img={<Img />} />
+            <Card title="POGLAVLJE" desc="fafafaaaaaaaaa sas  a fa fas af ahuioahuifahuahwu ihaiu h" img={<Img />} />
             <Card title="ODLOMAK" desc="Ja nisam nitko i nista" img={<Img />} />
             <Card title="NASLOV" img={<Img />} />
             <Card title="NASLOVCI" img={<Img />} />
