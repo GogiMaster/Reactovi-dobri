@@ -1,0 +1,55 @@
+@keyframes animacija {
+  0% {
+    transform: translateY(-40rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.block {
+  cursor: pointer;
+  transition: all 250ms ease;
+  padding: 5rem 9rem;
+  font-size: 8rem;
+  color: $white;
+  transform: translateY(-40rem);
+
+  &__rotate {
+    animation: rot 2s linear forwards !important;
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 70vh;
+  }
+
+  &__first {
+    animation: animacija 2s linear forwards;
+    background-color: rgb(148, 110, 110);
+  }
+
+  &__second {
+    animation: animacija 2s linear forwards;
+    animation-delay: 1s;
+    background-color: rgba(220, 20, 60, 0.685);
+  }
+
+  &__third {
+    animation: animacija 2s linear forwards;
+    animation-delay: 2s;
+
+    background-color: $orange;
+  }
+}

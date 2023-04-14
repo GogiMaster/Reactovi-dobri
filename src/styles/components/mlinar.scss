@@ -1,0 +1,24 @@
+.mlinar {
+  &__title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 84px;
+    span {
+      color: #f9b601;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    gap: 12px;
+
+    &--item {
+      padding: 8px 16px;
+
+      color: #ecece3;
+      border-radius: 18px;
+      background: #141212;
+    }
+  }
+}

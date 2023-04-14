@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const transformExe = () => {
+const TransformExe = () => {
   const [scale, useScale] = useState(false);
 
   const toggleScale = () => {
@@ -47,4 +47,4 @@ const transformExe = () => {
   );
 };
 
-export default transformExe;
+export default TransformExe;

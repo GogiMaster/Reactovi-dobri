@@ -3,4 +3,10 @@
   max-width: 1300px;
   margin-bottom: 5rem;
   padding: 0 1rem;
+
+  &--dark {
+    background-color: $black;
+    color: $white;
+    height: 100vh;
+  }
 }

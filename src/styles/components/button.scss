@@ -55,6 +55,8 @@
   &--animate {
     &:active {
       animation: anima 2s linear infinite alternate;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
     }
   }
 }

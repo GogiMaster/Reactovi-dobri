@@ -7,13 +7,14 @@ const Header = () => {
       <div className="header__aside">
         <div className="header__aside__nav">
           <div className="header__aside__nav--text">
-            <a href="#">SHOP</a>
+            <a href="/">HOME</a>
           </div>
           <div className="header__aside__nav--text">
-            <a href="#">DISCOVER</a>
+            <a href="/exe">EXERCISE</a>
           </div>
           <div className="header__aside__nav--text">
-            <a href="#">HELP</a>
+            <a href="/ispit">ISPIT</a>
+            <a href="/mlinar">Mlinar</a>
           </div>
         </div>
         <button className="header__aside__is">EASTER</button>
