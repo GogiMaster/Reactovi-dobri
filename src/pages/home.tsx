@@ -1,5 +1,11 @@
+import gif from "../assets/Images/gif.gif";
+
 const Home = () => {
-  return <div className="container">Homess</div>;
+  return (
+    <>
+      <img src={gif} className="gif" />
+    </>
+  );
 };
 
 export default Home;

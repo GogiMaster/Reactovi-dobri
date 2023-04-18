@@ -1,13 +1,12 @@
 .container {
   margin: 0 auto;
   max-width: 1300px;
-
   padding: 0 1rem;
 
   &--dark {
     background-color: #121415;
     color: $white;
-    
+
     margin-top: -2rem;
     padding: 50px 0;
   }
