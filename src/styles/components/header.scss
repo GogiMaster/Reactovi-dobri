@@ -14,7 +14,6 @@
   }
   &__aside {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     font-size: 1.4rem;
     margin-right: 10rem;
@@ -35,7 +34,6 @@
     }
 
     &__nav {
-      width: 30rem;
       border-radius: 0.5rem;
       margin-right: 4rem;
       display: flex;

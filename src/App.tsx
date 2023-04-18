@@ -1,8 +1,12 @@
-import Exe from "./pages/exe";
 import Header from "./components/header";
+//pages
+import Exe from "./pages/exe";
+import Fave from './pages/fave';
 import Home from "./pages/home";
 import Ispit from "./pages/ispit";
 import Mlinar from "./pages/mlinar";
+import Teorem from "./pages/teorem";
+
 //nesto
 import "./styles/styles.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -24,6 +28,14 @@ const App = () => {
     {
       path: "/mlinar",
       element: <Mlinar />,
+    },
+    {
+      path: "/teorem",
+      element: <Teorem />,
+    },
+    {
+      path: "/fave",
+      element: <Fave />,
     },
   ]);
 

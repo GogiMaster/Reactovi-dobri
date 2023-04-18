@@ -1,0 +1,187 @@
+.teorem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 229px 0;
+
+        &__title{
+            position: relative;
+            text-align: center;
+
+                &__main{
+                    display: block;
+                width: 720px;
+                }
+            h1{
+                
+                font-size: 80px;
+            }
+            p{
+                color: $grey;
+                font-size: 24px;
+            }
+            
+        }
+
+        &__icona{
+            bottom: 50px;
+            right: 0;
+            position: absolute;
+        }
+        &__iconb{
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        &__iconc{
+            z-index: -1;
+            top: 40px;
+            left: -20px;
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            border: 1px dashed $purple;
+            position: absolute;
+        }
+        &__icond{
+            z-index: -1;
+            bottom: 90px;
+            right: 30px;
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            border: 1px dashed $purple;
+            position: absolute;
+        }
+        &__solo{
+            margin: 150px 0;
+        }
+
+
+        &__card{
+            padding: 40px;
+            border-radius: 24px;
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 10px 10px 24px -4px rgba(0,0,0,0.37);
+            &__container{
+                column-gap: 30px;
+                row-gap: 85px;
+                margin: 125px 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        &__tutor{
+            margin: 120px 0;
+            position: relative;
+            background: linear-gradient(226.69deg, rgba(127, 95, 211, 0.9) 4.52%, #5C3EE8 94.64%);border-radius: 24px;
+            padding: 80px  95px;
+            display: flex;
+            
+            column-gap: 195px;
+            p{
+                color: $white;
+                font-size: 30px;
+            }
+
+            &__profile{
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: center;
+                h2,h4{
+                    color: $white;
+                }
+                
+
+                img{
+                    top: 40px;
+                    position: absolute;
+                    
+                }
+            }
+        }
+
+        //
+
+        &__steps{
+            display: flex;
+            flex-direction: column;
+
+            &__btn{
+                font-size: 20px;
+                margin: 110px 0;
+                color: $white;
+                padding: 14px 80px;
+                background: linear-gradient(226.69deg, rgba(127, 95, 211, 0.9) 4.52%, #5C3EE8 94.64%);
+box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
+border-radius: 8px;
+            }
+
+            p{
+                color: $grey;
+                font-size: 24px;
+            }
+            span{
+                margin-right: 32px;
+                color: $purple;
+                font-size: 30px;
+                box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.05);
+                padding: 14px 25px;
+                border-radius:50% ;
+            }
+        }
+        &__section__third{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+
+            button{
+                padding: 14px 80px;
+                
+            }
+        }
+
+        //faq
+        &__faq{
+            &__question{
+                color: $grey;
+                position: relative;
+                font-size: 24px;
+                width: 730px;
+                display: flex;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                padding: 24px;
+            }
+
+            &__arrow{
+                position: absolute;
+                right: 24px;
+                top: 50px;
+            }
+
+            &__container{
+                margin-bottom: 160px;
+            }
+        }
+
+        &__fotter{
+            display: flex;
+            flex-direction: column;
+            color: $white;
+            width: 100%;
+            padding: 165px 100px 0;
+            background: linear-gradient(226.69deg, rgba(127, 95, 211, 0.9) 4.52%, #5C3EE8 94.64%);
+            
+            &__about{
+                display: flex;
+                gap: 71px;
+                margin-bottom: 95px;
+            }
+        }
+}

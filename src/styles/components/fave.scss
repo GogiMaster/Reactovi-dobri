@@ -1,0 +1,96 @@
+.fave{
+    background-color: #16191C;
+    color: $white;
+    display: flex;
+    gap: 48px;
+    padding: 0 24px 481px 24px ;
+
+    &__logo{
+        padding: 2px ;
+        width: 86px;
+        height: 86px;
+        border: 3px dashed $green;
+        border-radius: 50%;
+        display: flex;
+        margin-right: 20px;
+    }
+
+    &__left{
+
+        &__nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2{
+                color: $grey;
+            }
+
+            img{
+                height: 10px;
+            }
+        }
+
+
+        &__profile{
+            display: flex;
+            span{
+                color: #0074FF;
+            }
+        }
+    }
+
+    &__mid{
+
+        &__top{
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            position: relative;
+
+            span{
+                color: $grey;
+            }
+
+            h3::before{
+                content: '';
+                height: 6px;
+                background-color: #0074FF;
+                display: block;
+                width: 126px;
+                position: absolute;
+                top: 0px;
+
+            }
+        }
+
+        &__cards{
+            margin-top: 40px;
+            display: flex;
+        flex-grow: 2;
+
+            gap: 16px;
+        }
+    }
+
+    &__card{
+            &:nth-child(0){
+                flex-grow: 2;
+            }
+            flex-grow: 1;
+        background-color: #1B2026;
+        border-radius: 8px;
+        padding: 16px 24px;
+
+        &__bot{
+            display: flex;
+            justify-content: end;
+            color: #0074FF;
+        }
+    }
+        &__right{
+            display: flex;
+            flex-direction: column;
+        }
+}
+    

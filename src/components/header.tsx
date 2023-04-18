@@ -14,7 +14,15 @@ const Header = () => {
           </div>
           <div className="header__aside__nav--text">
             <a href="/ispit">ISPIT</a>
-            <a href="/mlinar">Mlinar</a>
+          </div>
+          <div className="header__aside__nav--text">
+            <a href="/mlinar">MLINAR</a>
+          </div>
+          <div className="header__aside__nav--text">
+            <a href="/teorem">TEOREM</a>
+          </div>
+          <div className="header__aside__nav--text">
+            <a href="/fave">FAVE</a>
           </div>
         </div>
         <button className="header__aside__is">EASTER</button>
