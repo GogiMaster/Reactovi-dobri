@@ -24,6 +24,9 @@ const Header = () => {
           <div className="header__aside__nav--text">
             <a href="/fave">FAVE</a>
           </div>
+          <div className="header__aside__nav--text">
+            <a href="/varijable">VARIJABLE</a>
+          </div>
         </div>
         <button className="header__aside__is">EASTER</button>
       </div>

@@ -1,11 +1,12 @@
 import Header from "./components/header";
 //pages
 import Exe from "./pages/exe";
-import Fave from './pages/fave';
+import Fave from "./pages/fave";
 import Home from "./pages/home";
 import Ispit from "./pages/ispit";
 import Mlinar from "./pages/mlinar";
 import Teorem from "./pages/teorem";
+import Varijable from "./pages/varijable";
 
 //nesto
 import "./styles/styles.scss";
@@ -36,6 +37,10 @@ const App = () => {
     {
       path: "/fave",
       element: <Fave />,
+    },
+    {
+      path: "/varijable",
+      element: <Varijable />,
     },
   ]);
 
