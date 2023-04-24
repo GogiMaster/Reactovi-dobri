@@ -84,7 +84,7 @@ const Varijable = () => {
           </div>
         </h4>
         <hr />
-        <table className="tablica">
+        <table className="table">
           <tr>
             <th>Voće: </th>
             <td>{fruit}</td>

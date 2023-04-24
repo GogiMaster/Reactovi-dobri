@@ -5,6 +5,7 @@ import Fave from "./pages/fave";
 import Home from "./pages/home";
 import Ispit from "./pages/ispit";
 import Mlinar from "./pages/mlinar";
+import Petlje from "./pages/petlj";
 import Teorem from "./pages/teorem";
 import Varijable from "./pages/varijable";
 
@@ -41,6 +42,10 @@ const App = () => {
     {
       path: "/varijable",
       element: <Varijable />,
+    },
+    {
+      path: "/petlje",
+      element: <Petlje />,
     },
   ]);
 
