@@ -83,20 +83,20 @@ const Petlje = () => {
     // }
     
     //6. Print all the elements of the following array
-      let array =['element1','element2','element3','element4']
+    //   let array =['element1','element2','element3','element4']
 
-    for(let i =0; i < array.length; i++){
-      console.log(array[i]) //zasto je ' i ' wrappan u zagrade []
-    }
+    // for(let i =0; i < array.length; i++){
+    //   console.log(array[i])   
+    // }
 
     //7. Calculate the sum of all the numbers in the following array
 
-    // let arrayNum = [1, 12, 1, 1, 1];
-    // let sum = 0;
-    // for (let  i = 0; i <arrayNum.length; i++) {
-    //    sum += arrayNum[i]; 
-    //     }
-    //   console.log("Ukupan rezultat je " + sum );
+    let arrayNum = [1, 12, 1, 1, 1];
+    let sum = 0;
+    for (let  i = 0; i <arrayNum.length; i++) {
+       sum += arrayNum[i]; 
+        }
+      console.log("Ukupan rezultat je " + sum );
 
       //Kraj
       
