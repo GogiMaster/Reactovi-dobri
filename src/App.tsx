@@ -2,6 +2,7 @@ import Header from "./components/header";
 //pages
 import Exe from "./pages/exe";
 import Fave from "./pages/fave";
+import Funkcije from "./pages/funkcije";
 import Home from "./pages/home";
 import Ispit from "./pages/ispit";
 import Mlinar from "./pages/mlinar";
@@ -46,6 +47,10 @@ const App = () => {
     {
       path: "/petlje",
       element: <Petlje />,
+    },
+    {
+      path: "/funkcije",
+      element: <Funkcije />,
     },
   ]);
 
