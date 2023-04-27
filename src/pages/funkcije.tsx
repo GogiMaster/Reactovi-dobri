@@ -3,18 +3,18 @@ const Funkcije = () => {
   let arr = ["mama", "tata", "baka", "djed"];
 
   for (let i = 0; i < arr.length; i++) {
-    // if (arr[i] == "baka") {
-    //   break;
-    // }
-    // if (arr[i] == "tata") {
-    //   delete arr[i];
-    // }
-    //console.log(arr[i]);
+    if (arr[i] == "baka") {
+      break;
+    }
+    if (arr[i] == "tata") {
+      delete arr[i];
+    }
+    console.log(arr[i]);
   }
 
-  //   arr.push("Goran");
+    arr.push("Goran");
 
-  //   console.log("Ovo je array", arr);
+    console.log("Ovo je array", arr);
 
   //FUNKCIJE
   let baka;
@@ -56,7 +56,7 @@ const Funkcije = () => {
 
   //ZADATAK
 
-  let brojevi = [12, 34, 6, 242435, 14, 474, 23, 92, 72];
+  let brojevi = [12, 34, 6, 123456789, 14, 474, 23, 92, 72];
   let largest = 0;
   const biggestNumber = () => {
     for (let i = 0; i < brojevi.length; i++) {
@@ -64,8 +64,49 @@ const Funkcije = () => {
         largest = brojevi[i];
       }
     }
+    return largest
   };
 
+  //ZADAĆA
+
+  const rijeci = [
+    "balance",
+    "biscuit",
+    "sir",
+    "grind",
+    "refund",
+    "cast",
+    "circulate",
+    "accumulation",
+    "fold",
+    "cut",
+    "entertainment",
+  ];
+  let longest = ''
+  let shortest = rijeci[0]
+
+  const najduza = () => {
+    for (let i =0; i<rijeci.length;i++){
+      if(rijeci[i].length >= longest.length){
+        longest =rijeci[i]
+
+      }else if(rijeci[i].length < shortest.length){ //ELSE IF ne radi
+        shortest=rijeci[i]
+      }
+    }
+    return longest
+  };
+
+  const najkraca = () => {
+    for (let i =0; i<rijeci.length;i++){
+       if(rijeci[i].length < shortest.length){
+        shortest=rijeci[i]
+      }
+    }
+    return shortest
+  };
+
+  //
   return (
     <>
       <div className="container">
@@ -80,8 +121,12 @@ const Funkcije = () => {
         <div>JSON</div>
         <pre>{JSON.stringify(car, null, 2)}</pre>
         <div>{printValue("snaga")}</div>
-        <div>{biggestNumber()}</div>
-        <div>{largest}</div>
+        <div>Funkija print {biggestNumber()}</div>
+        <div>Varijabla print {largest} </div>
+        <hr />
+        <h1>ZADAĆA</h1>
+        <div>Najduza rijec je: {najduza()}</div>
+        <div>Najkraca rijec je: {najkraca()}</div>
       </div>
     </>
   );
