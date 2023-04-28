@@ -9,6 +9,7 @@ import Mlinar from "./pages/mlinar";
 import Petlje from "./pages/petlj";
 import Teorem from "./pages/teorem";
 import Varijable from "./pages/varijable";
+import Vjezba2804 from "./pages/vjezba2804";
 
 //nesto
 import "./styles/styles.scss";
@@ -51,6 +52,10 @@ const App = () => {
     {
       path: "/funkcije",
       element: <Funkcije />,
+    },
+    {
+      path: "/2804",
+      element: <Vjezba2804 />,
     },
   ]);
 
