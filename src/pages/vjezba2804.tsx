@@ -51,7 +51,7 @@ const Vjezba2804 = () => {
       height: 185,
       hobby: "Football",
       employed: false,
-      favoriteColor: "Red",
+      favoriteColor: "red",
     },
     {
       name: "Nikolina",
@@ -190,7 +190,7 @@ const Vjezba2804 = () => {
   height()
 
   //Pronađi sve osobe kojima je najdraža boja "red"
-  const favoriteColor = ()=>{
+  const favColor = ()=>{
     let message =''
     for(let i = 0; i<frontendRazred.length;i++){
       if(frontendRazred[i].favoriteColor =='red'){
@@ -201,7 +201,7 @@ const Vjezba2804 = () => {
 
     return `Svi kojima je najdraza boja crvena: ${message}`
   }
-  favoriteColor()
+  favColor()
 
   //Pronađi sve osobe kojima prezime završava na "c" ili "ć"
   const lastLetter = ()=>{
@@ -218,14 +218,19 @@ const Vjezba2804 = () => {
   lastLetter()
   
   //TABLICA-Obojati rijec u vrijednost koja pise unutra
-  const colorText =document.querySelector('#table')
-  for(let i =0;i< frontendRazred.length;i++){
-   let coloring= frontendRazred[i].favoriteColor[i]
-   const element = document.createElement('span')
-   element.style.color = coloring
+  
 
-   const valueElement = document.createElement("span");
-   valueElement.textContent = coloring;
+  
+   let boje = 'red' || 'green' || 'blue' || 'black' || 'silver';
+  const handleColor=(favoriteColor:string)=>{
+    switch(favoriteColor) {
+      case "red":
+        return "color--red";
+      case "blue":
+        return "color--blue";
+      default: 
+        return "";
+    }
   }
   return (
     <>
@@ -241,7 +246,7 @@ const Vjezba2804 = () => {
         <div>{height()} </div>
          <hr />
          <h1>Pronađi sve osobe kojima je najdraža boja "red"</h1>
-         <div>{favoriteColor()} </div>
+         <div>{favColor()} </div>
          <hr />
          <h1>Pronađi sve osobe kojima prezime završava na "c" ili "ć"</h1>
          <div>{lastLetter()} </div>
