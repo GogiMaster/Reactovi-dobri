@@ -135,40 +135,118 @@ const Vjezba2804 = () => {
     },
   ];
 
-  //Najmlađa osoba
-  let young = frontendRazred[0].age;
-  const youngest = () => {
-    for (let i = 0; i < frontendRazred.length; i++) {
-      if (frontendRazred[i].age <= young) {
-        young = frontendRazred[i].age;
+ 
+
+  //najmlađa osoba
+
+  const youngest =()=>{
+    let name =''
+    let young = frontendRazred[0].age
+    for (let i = 0; i < frontendRazred.length; i++){
+      if(frontendRazred[i].age <= young){
+        young = frontendRazred[i].age
+        name = frontendRazred[i].name
       }
     }
-  };
-  youngest();
-  console.log(young);
+    return `Najmlađa osoba je: ${name}`
+  }
+  youngest()
 
   //Pocinje sa slovo M
 
   const letter = frontendRazred[0].name[0];
   const zadnje = frontendRazred[0].name[0].length - 1;
 
-  let imena = "";
+  
   const slovoM = () => {
+    let names = ''
     for (let i = 0; i < frontendRazred.length; i++) {
-      let letter = frontendRazred[i].name[0];
-      if (letter == "M") {
-        imena = frontendRazred[i].name;
+      if (frontendRazred[i].name.charAt(0) === 'M') {
+        
+        names += frontendRazred[i].name + ', '
       }
     }
-    return imena;
+    names=names.slice(0, -2)
+    
+    return `Svi kojima je početno slovo M: ${names}`
   };
   slovoM();
-  console.log(imena);
-  //TABLICA
+  
 
+  //Vislje od 160 i nize od 180
+
+  const height =()=>{
+    let message = ''
+    for(let i = 0;i <frontendRazred.length;i++){
+      if(frontendRazred[i].height >=160 && frontendRazred[i].height <=180){
+         message += frontendRazred[i].name + ', ';
+        
+      }
+    }
+    message = message.slice(0, -2)
+
+    return `Svi između 160 i 180: ${message}`
+  }
+  height()
+
+  //Pronađi sve osobe kojima je najdraža boja "red"
+  const favoriteColor = ()=>{
+    let message =''
+    for(let i = 0; i<frontendRazred.length;i++){
+      if(frontendRazred[i].favoriteColor =='red'){
+        message += frontendRazred[i].name + ', '
+      }
+    }
+    message = message.slice(0, -2)
+
+    return `Svi kojima je najdraza boja crvena: ${message}`
+  }
+  favoriteColor()
+
+  //Pronađi sve osobe kojima prezime završava na "c" ili "ć"
+  const lastLetter = ()=>{
+    let name= ''
+    for (let i = 0; i <frontendRazred.length;i++){
+      let obj = frontendRazred[i].lastName.slice(-1)
+      if(obj == 'c' || obj == 'ć'){
+        name += frontendRazred[i].name + ', ' 
+      }
+    }
+    name = name.slice(0, -2)
+    return `Prezime završava na C ili Ć : ${name}`
+  }
+  lastLetter()
+  
+  //TABLICA-Obojati rijec u vrijednost koja pise unutra
+  const colorText =document.querySelector('#table')
+  for(let i =0;i< frontendRazred.length;i++){
+   let coloring= frontendRazred[i].favoriteColor[i]
+   const element = document.createElement('span')
+   element.style.color = coloring
+
+   const valueElement = document.createElement("span");
+   valueElement.textContent = coloring;
+  }
   return (
     <>
       <div className="container">
+
+      <h1>Najmlađa osoba iz objekta</h1>
+      <div>{youngest()} </div>
+      <hr />
+      <h1>Pronađi sve osobe kojima ime počinje na slovo "M"</h1>
+      <div>{slovoM()} </div>
+        <hr />
+        <h1>Pronađi sve osobe koje su višlje od 160 a niže od 180</h1>
+        <div>{height()} </div>
+         <hr />
+         <h1>Pronađi sve osobe kojima je najdraža boja "red"</h1>
+         <div>{favoriteColor()} </div>
+         <hr />
+         <h1>Pronađi sve osobe kojima prezime završava na "c" ili "ć"</h1>
+         <div>{lastLetter()} </div>
+         <hr />
+        
         <table className="table">
           <thead>
             <th>Name</th>
@@ -180,7 +258,7 @@ const Vjezba2804 = () => {
             <th>Employed</th>
             <th>Fav Color</th>
           </thead>
-          <tbody>
+          <tbody id="table">
             {frontendRazred.map((student) => {
               return (
                 <tr>
@@ -197,22 +275,7 @@ const Vjezba2804 = () => {
             })}
           </tbody>
         </table>
-        <table className="table">
-          <thead>
-            <th>Ime</th>
-            <th>Prezime</th>
-            <th>Godine</th>
-          </thead>
-          {frontendRazred.map((student) => {
-            return (
-              <tr>
-                <td>{student.name}</td>
-                <td>{student.lastName}</td>
-                <td>{student.age}</td>
-              </tr>
-            );
-          })}
-        </table>
+        
       </div>
     </>
   );
