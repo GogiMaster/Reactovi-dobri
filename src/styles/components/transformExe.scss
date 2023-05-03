@@ -13,7 +13,7 @@
     justify-content: center;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
 
     @media (min-width: $media-md) {
       grid-template-columns: 1fr 1fr;
@@ -61,4 +61,15 @@
         scale3d(2, 4, 1);
     }
   }
+}
+.boxing {
+  transform: scaleY(1.2);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+.boxara {
+  transform: scaleY(0.3);
 }

@@ -135,123 +135,114 @@ const Vjezba2804 = () => {
     },
   ];
 
- 
-
   //najmlađa osoba
 
-  const youngest =()=>{
-    let name =''
-    let young = frontendRazred[0].age
-    for (let i = 0; i < frontendRazred.length; i++){
-      if(frontendRazred[i].age <= young){
-        young = frontendRazred[i].age
-        name = frontendRazred[i].name
+  const youngest = () => {
+    let name = "";
+    let young = frontendRazred[0].age;
+    for (let i = 0; i < frontendRazred.length; i++) {
+      if (frontendRazred[i].age <= young) {
+        young = frontendRazred[i].age;
+        name = frontendRazred[i].name;
       }
     }
-    return `Najmlađa osoba je: ${name}`
-  }
-  youngest()
+    return `Najmlađa osoba je: ${name}`;
+  };
+  youngest();
 
   //Pocinje sa slovo M
 
   const letter = frontendRazred[0].name[0];
   const zadnje = frontendRazred[0].name[0].length - 1;
 
-  
   const slovoM = () => {
-    let names = ''
+    let names = "";
     for (let i = 0; i < frontendRazred.length; i++) {
-      if (frontendRazred[i].name.charAt(0) === 'M') {
-        
-        names += frontendRazred[i].name + ', '
+      if (frontendRazred[i].name.charAt(0) === "M") {
+        names += frontendRazred[i].name + ", ";
       }
     }
-    names=names.slice(0, -2)
-    
-    return `Svi kojima je početno slovo M: ${names}`
+    names = names.slice(0, -2);
+
+    return `Svi kojima je početno slovo M: ${names}`;
   };
   slovoM();
-  
 
   //Vislje od 160 i nize od 180
 
-  const height =()=>{
-    let message = ''
-    for(let i = 0;i <frontendRazred.length;i++){
-      if(frontendRazred[i].height >=160 && frontendRazred[i].height <=180){
-         message += frontendRazred[i].name + ', ';
-        
+  const height = () => {
+    let message = "";
+    for (let i = 0; i < frontendRazred.length; i++) {
+      if (frontendRazred[i].height >= 160 && frontendRazred[i].height <= 180) {
+        message += frontendRazred[i].name + ", ";
       }
     }
-    message = message.slice(0, -2)
+    message = message.slice(0, -2);
 
-    return `Svi između 160 i 180: ${message}`
-  }
-  height()
+    return `Svi između 160 i 180: ${message}`;
+  };
+  height();
 
   //Pronađi sve osobe kojima je najdraža boja "red"
-  const favColor = ()=>{
-    let message =''
-    for(let i = 0; i<frontendRazred.length;i++){
-      if(frontendRazred[i].favoriteColor =='red'){
-        message += frontendRazred[i].name + ', '
+  const favColor = () => {
+    let message = "";
+    for (let i = 0; i < frontendRazred.length; i++) {
+      if (frontendRazred[i].favoriteColor == "red") {
+        message += frontendRazred[i].name + ", ";
       }
     }
-    message = message.slice(0, -2)
+    message = message.slice(0, -2);
 
-    return `Svi kojima je najdraza boja crvena: ${message}`
-  }
-  favColor()
+    return `Svi kojima je najdraza boja crvena: ${message}`;
+  };
+  favColor();
 
   //Pronađi sve osobe kojima prezime završava na "c" ili "ć"
-  const lastLetter = ()=>{
-    let name= ''
-    for (let i = 0; i <frontendRazred.length;i++){
-      let obj = frontendRazred[i].lastName.slice(-1)
-      if(obj == 'c' || obj == 'ć'){
-        name += frontendRazred[i].name + ', ' 
+  const lastLetter = () => {
+    let name = "";
+    for (let i = 0; i < frontendRazred.length; i++) {
+      let obj = frontendRazred[i].lastName.slice(-1);
+      if (obj == "c" || obj == "ć") {
+        name += frontendRazred[i].name + ", ";
       }
     }
-    name = name.slice(0, -2)
-    return `Prezime završava na C ili Ć : ${name}`
-  }
-  lastLetter()
-  
-  //TABLICA-Obojati rijec u vrijednost koja pise unutra
-  
+    name = name.slice(0, -2);
+    return `Prezime završava na C ili Ć : ${name}`;
+  };
+  lastLetter();
 
-  
-   let boje = 'red' || 'green' || 'blue' || 'black' || 'silver';
-  const handleColor=(favoriteColor:string)=>{
-    switch(favoriteColor) {
+  //TABLICA-Obojati rijec u vrijednost koja pise unutra
+
+  let boje = "red" || "green" || "blue" || "black" || "silver";
+  const handleColor = (favoriteColor: string) => {
+    switch (favoriteColor) {
       case "red":
         return "color--red";
       case "blue":
         return "color--blue";
-      default: 
+      default:
         return "";
     }
-  }
+  };
   return (
     <>
       <div className="container">
-
-      <h1>Najmlađa osoba iz objekta</h1>
-      <div>{youngest()} </div>
-      <hr />
-      <h1>Pronađi sve osobe kojima ime počinje na slovo "M"</h1>
-      <div>{slovoM()} </div>
+        <h1>Najmlađa osoba iz objekta</h1>
+        <div>{youngest()} </div>
+        <hr />
+        <h1>Pronađi sve osobe kojima ime počinje na slovo "M"</h1>
+        <div>{slovoM()} </div>
         <hr />
         <h1>Pronađi sve osobe koje su višlje od 160 a niže od 180</h1>
         <div>{height()} </div>
-         <hr />
-         <h1>Pronađi sve osobe kojima je najdraža boja "red"</h1>
-         <div>{favColor()} </div>
-         <hr />
-         <h1>Pronađi sve osobe kojima prezime završava na "c" ili "ć"</h1>
-         <div>{lastLetter()} </div>
-         <hr />
-        
+        <hr />
+        <h1>Pronađi sve osobe kojima je najdraža boja "red"</h1>
+        <div>{favColor()} </div>
+        <hr />
+        <h1>Pronađi sve osobe kojima prezime završava na "c" ili "ć"</h1>
+        <div>{lastLetter()} </div>
+        <hr />
+
         <table className="table">
           <thead>
             <th>Name</th>
@@ -280,7 +271,6 @@ const Vjezba2804 = () => {
             })}
           </tbody>
         </table>
-        
       </div>
     </>
   );

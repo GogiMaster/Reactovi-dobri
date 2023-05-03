@@ -36,6 +36,9 @@ const Header = () => {
           <div className="header__aside__nav--text">
             <a href="/2804">VJEZBA 2804</a>
           </div>
+          <div className="header__aside__nav--text">
+            <a href="/0305">VJEZBA 0305</a>
+          </div>
         </div>
         <button className="header__aside__is">EASTER</button>
       </div>

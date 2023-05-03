@@ -14,6 +14,7 @@ import Vjezba2804 from "./pages/vjezba2804";
 //nesto
 import "./styles/styles.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Vjezba0305 from "./pages/vjezba0305";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -56,6 +57,10 @@ const App = () => {
     {
       path: "/2804",
       element: <Vjezba2804 />,
+    },
+    {
+      path: "/0305",
+      element: <Vjezba0305 />,
     },
   ]);
 
