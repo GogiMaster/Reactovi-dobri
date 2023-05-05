@@ -13,6 +13,11 @@ body {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 250ms ease;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .container {
@@ -22,14 +27,7 @@ body {
 }
 
 .boxing {
-  transform: scaleY(1.1);
-  color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 5rem;
-}
-.boxara {
-  transform: scaleY(0.3);
+  transform: scaleY(0.5);  
 }
 
