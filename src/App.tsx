@@ -15,6 +15,7 @@ import Vjezba2804 from "./pages/vjezba2804";
 import "./styles/styles.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Vjezba0305 from "./pages/vjezba0305";
+import Brewary from "./pages/brewary";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -61,6 +62,10 @@ const App = () => {
     {
       path: "/0305",
       element: <Vjezba0305 />,
+    },
+    {
+      path: "/brewary",
+      element: <Brewary />,
     },
   ]);
 
