@@ -117,18 +117,29 @@ function Room() {
       return console.log("Svijetlo je ugašeno");
     }
   };
-  let box4 = document.querySelector(".box")[4];
-
+  
+  let svetlo;
   this.switch = function () {
-    let svetlo = false;
-    if (svetlo) {
-      box4.style.backgroundColor = "black";
+    let box4 = document.getElementsByClassName('box')[3];
+    if (svetlo ===0) {
+      box4.style = "background-Color:black;color:white;";
+      box4.innerHTML='OFF';
+      (svetlo=1);
+      return console.log('Svijetlo je ugašeno')
     } else {
-      box4.style.backgroundColor = "yellow";
+      box4.style = "background-Color:yellow;color:black;";
+      box4.innerHTML='ON';
+      (svetlo=0);
+      return console.log('Svijetlo je upaljeno')
     }
-  };
+  }
 }
+
+
 const room = new Room();
 room.light();
 console.log(room.povrsina);
 console.log(room.volumen);
+room.switch()
+
+
