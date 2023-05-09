@@ -11,9 +11,12 @@ const Brewary = () => {
   const [data, setData] = useState<BreweryType[]>([]);
   const [dataByCity, setdataByCity] = useState<BreweryType[]>([]);
   const [dataSearch, setdataSearch] = useState<BreweryType[]>([]);
+  //
+  const [searchData, setSearchData] = useState<BreweryType[]>([]);
+  const [searchValue, setSearchValue] = useState<string>("");
 
   const getBreweries = () => {
-    fetch("https://api.openbrewerydb.org/v1/breweries")
+    fetch("https://api.openbrewerydb.org/v1/breweries?&per_page=15")
       .then((response) => {
         return response.json();
       })
@@ -49,12 +52,22 @@ const Brewary = () => {
       .catch((error) => console.error(error));
   };
 
-  //Search input button
+  //search
+  const handleSearch = (searchValue: string) => {
+    fetch(`https://api.openbrewerydb.org/v1/breweries?by_name=${searchValue}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((jsonData) => {
+        setSearchData(jsonData);
+      })
+      .catch((error) => console.error(error));
+  };
 
   useEffect(() => {
     getBreweries();
     getBrewaryByCity("", 0, 0);
-    searchBrewary("link");
+    searchBrewary("");
   }, []);
 
   return (
@@ -76,11 +89,24 @@ const Brewary = () => {
         })}
       </div>
       <h2>Page</h2>
+
       <h1>Search</h1>
       <div>
-        {dataSearch.map((brewary: BreweryType) => {
-          return <div key={brewary.id}>{brewary.name}</div>;
-        })}
+        <input
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+          type="text"
+        />
+        <button onClick={() => handleSearch(searchValue)}>Search</button>
+      </div>
+      <div>
+        {searchData.length > 0 ? (
+          searchData.map((brewery: BreweryType) => {
+            return <div key={brewery.id}>{brewery.name}</div>;
+          })
+        ) : (
+          <div>Nisam pronašao niti jednu pivovaru</div>
+        )}
       </div>
     </div>
   );

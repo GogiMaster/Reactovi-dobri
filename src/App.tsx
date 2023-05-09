@@ -16,6 +16,7 @@ import "./styles/styles.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Vjezba0305 from "./pages/vjezba0305";
 import Brewary from "./pages/brewary";
+import Pokemon from "./pages/pokemons";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -66,6 +67,10 @@ const App = () => {
     {
       path: "/brewary",
       element: <Brewary />,
+    },
+    {
+      path: "/pokemon",
+      element: <Pokemon />,
     },
   ]);
 
