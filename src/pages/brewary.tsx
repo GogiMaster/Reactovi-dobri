@@ -5,17 +5,19 @@ type BreweryType = {
   city: string;
   id: string;
   country: string;
+  page: number
 };
 
 const Brewary = () => {
   const [data, setData] = useState<BreweryType[]>([]);
   const [dataByCity, setdataByCity] = useState<BreweryType[]>([]);
   const [dataSearch, setdataSearch] = useState<BreweryType[]>([]);
-
+  
   const getBreweries = () => {
+   
     fetch("https://api.openbrewerydb.org/v1/breweries")
-      .then((response) => {
-        return response.json();
+    .then((response) => {
+      return response.json();
       })
       .then((jsonData) => {
         setData(jsonData);
@@ -23,6 +25,7 @@ const Brewary = () => {
       .catch((error) => console.error(error));
   };
   //trazi sa parametrima
+  let str:number 
   const getBrewaryByCity = (city: string, broj: number, page: number) => {
     fetch(
       `https://api.openbrewerydb.org/v1/breweries?by_city=${city}&per_page=${broj}&page=${page}`
@@ -35,7 +38,11 @@ const Brewary = () => {
         console.log(jsonData);
       })
       .catch((error) => console.error(error));
+      return (str=page)
   };
+
+  
+
   //trazi pivovaru
   const searchBrewary = (ime: string) => {
     fetch(`https://api.openbrewerydb.org/v1/breweries/search?query=${ime}`)
@@ -44,17 +51,20 @@ const Brewary = () => {
       })
       .then((jsonData) => {
         setdataSearch(jsonData);
-        console.log("search stuff:   " + jsonData);
+        console.log("search stuff:  " + jsonData);
       })
       .catch((error) => console.error(error));
   };
 
+
   //Search input button
+  
+  
 
   useEffect(() => {
     getBreweries();
-    getBrewaryByCity("", 0, 0);
-    searchBrewary("link");
+    getBrewaryByCity("san_diego", 5, 7);
+    searchBrewary("lnik");
   }, []);
 
   return (
@@ -76,7 +86,9 @@ const Brewary = () => {
         })}
       </div>
       <h2>Page</h2>
+      {str}
       <h1>Search</h1>
+     
       <div>
         {dataSearch.map((brewary: BreweryType) => {
           return <div key={brewary.id}>{brewary.name}</div>;
