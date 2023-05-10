@@ -1,0 +1,20 @@
+.country {
+  &__table {
+    text-align: center;
+
+    tr:nth-child(even) {
+      background-color: $grey;
+    }
+    img {
+      width: 35%;
+    }
+
+    td,
+    th {
+      font-size: 1.3rem;
+      width: 10rem;
+      border: 1px solid $black;
+      padding: 0.5rem;
+    }
+  }
+}

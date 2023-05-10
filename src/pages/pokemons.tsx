@@ -42,26 +42,25 @@ const Pokemon = () => {
   };
   /////
 
-  type FlagType={
-    name:string
-    
-  }
+  type FlagType = {
+    name: string;
+  };
 
-  const [country, setCountry] = useState<string>('');
+  const [country, setCountry] = useState<string>("");
   const [searchValue, setSearchValue] = useState<string>("");
 
-
-  const getCapital = (searchValue:string) => {
+  const getCapital = (searchValue: string) => {
     fetch(`https://restcountries.com/v3.1/name/${searchValue}`)
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         console.log(data[0]);
-        setCountry(data[0].maps.googleMaps);
+        setCountry(data[0].flags.png);
       })
       .catch((err) => console.log(err));
   };
+
   useEffect(() => {
     pokemonSearch("charmander");
     getBerries();
@@ -79,20 +78,17 @@ const Pokemon = () => {
               </div>
             );
           })}
-        </div><hr />
-          <h1>ZASTAVA</h1>
-          <input type="text" value={searchValue} onChange={(e)=> setSearchValue(e.target.value)} />
-          <button onClick={()=>getCapital(searchValue)}>Search</button>
-          <br /> <br />
-       
-        <div>
-          {/* {country.map((name:FlagType)=>
-          {
-            return <div>{name.name}</div>
-          })} */}
-          </div>{country}
-          <img src={country} />
-          <a href={country}>Link</a>
+        </div>
+        <hr />
+        <h1>ZASTAVA</h1>
+        <input
+          type="text"
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+        />
+        <button onClick={() => getCapital(searchValue)}>Search</button>
+        <br /> <br />
+        <img src={country} />
       </div>
     </>
   );

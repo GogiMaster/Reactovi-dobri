@@ -17,6 +17,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Vjezba0305 from "./pages/vjezba0305";
 import Brewary from "./pages/brewary";
 import Pokemon from "./pages/pokemons";
+import Europe from "./pages/europe";
+import EuropeCountries from "./pages/europe-countries";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -71,6 +73,14 @@ const App = () => {
     {
       path: "/pokemon",
       element: <Pokemon />,
+    },
+    {
+      path: "/europe",
+      element: <Europe />,
+    },
+    {
+      path: "/europe/:capitalId",
+      element: <EuropeCountries />,
     },
   ]);
 

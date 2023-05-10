@@ -45,8 +45,10 @@ const Header = () => {
           <div className="header__aside__nav--text">
             <a href="/pokemon">POKEMON</a>
           </div>
+          <div className="header__aside__nav--text">
+            <a href="/europe">EUROPE</a>
+          </div>
         </div>
-        <button className="header__aside__is">EASTER</button>
       </div>
     </header>
   );
