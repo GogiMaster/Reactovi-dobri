@@ -11,8 +11,6 @@ type PokemonColor = {
 };
 const Pokemon = () => {
   const [pokemonData, setPokemonData] = useState<PokemonType>();
-  const [pokemonColor, setPokemonColor] = useState<PokemonColor>();
-  const [searchValue, setSearchvalue] = useState<string>("");
 
   ///
   const pokemonSearch = (pokemonName: string) => {
@@ -43,41 +41,58 @@ const Pokemon = () => {
       .catch((err) => console.log(err));
   };
   /////
-  const [flag, setFlag] = useState<string>("");
 
-  const getCapital = () => {
-    fetch(`https://restcountries.com/v3.1/capital/zagreb`)
+  type FlagType={
+    name:string
+    
+  }
+
+  const [country, setCountry] = useState<string>('');
+  const [searchValue, setSearchValue] = useState<string>("");
+
+
+  const getCapital = (searchValue:string) => {
+    fetch(`https://restcountries.com/v3.1/name/${searchValue}`)
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data[0].flags.png);
-        setFlag(data[0].flags.png);
+        console.log(data[0]);
+        setCountry(data[0].maps.googleMaps);
       })
       .catch((err) => console.log(err));
   };
   useEffect(() => {
     pokemonSearch("charmander");
     getBerries();
-    getCapital();
   }, []);
 
   return (
     <>
       <div className="container">
         <h1>All Berries</h1>
-        {/* <div>
+        <div>
           {berries.map((berry) => {
             return (
               <div>
                 <div>{berry.name}</div>
-                <a href={berry.url}>Link to: {berry.name}</a>
               </div>
             );
           })}
-        </div> */}
-
-        <img src={flag} />
+        </div><hr />
+          <h1>ZASTAVA</h1>
+          <input type="text" value={searchValue} onChange={(e)=> setSearchValue(e.target.value)} />
+          <button onClick={()=>getCapital(searchValue)}>Search</button>
+          <br /> <br />
+       
+        <div>
+          {/* {country.map((name:FlagType)=>
+          {
+            return <div>{name.name}</div>
+          })} */}
+          </div>{country}
+          <img src={country} />
+          <a href={country}>Link</a>
       </div>
     </>
   );
