@@ -26,26 +26,31 @@ type CountryLanguages = {
 
 const Europe = () => {
   const [country, setCountry] = useState<CountryType[]>([]);
+  const [searchValue, setSearchValue] = useState<string>("...");
+  
 
-  const getEurope = () => {
-    fetch(`https://restcountries.com/v3.1/region/europe`)
+  const getEurope = (searchValue:string) => {
+    fetch(`https://restcountries.com/v3.1/region/${searchValue}`)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         console.log(data);
         setCountry(data);
+       
       })
       .catch((error) => console.error(error));
   };
 
   useEffect(() => {
-    getEurope();
+    
   }, []);
   return (
     <>
       <div className="container">
-        <h1>Europe</h1>
+        <h1>Search Continent of: {searchValue}</h1>
+        <input placeholder="Search Continent" type="text" onChange={(e)=> setSearchValue(e.target.value)}/>
+        <button onClick={()=> getEurope(searchValue)}>Search</button>
         <table className="country__table">
           <tr>
             <th>Name</th>
@@ -54,12 +59,14 @@ const Europe = () => {
             <th>Curency</th>
             <th>Languages</th>
           </tr>
-
+        <div>
+          
+        </div>
           {country.map((country) => {
             return (
               <tr>
                 <td>
-                  <a href={`/europe/${country.capital[0].toLocaleLowerCase()}`}>
+                  <a href={`/europe/${country.name.common.toLocaleLowerCase()}`}>
                     {country.name.common}
                   </a>
                 </td>
@@ -86,6 +93,8 @@ const Europe = () => {
               </tr>
             );
           })}
+
+          
         </table>
       </div>
     </>

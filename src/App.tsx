@@ -79,7 +79,7 @@ const App = () => {
       element: <Europe />,
     },
     {
-      path: "/europe/:capitalId",
+      path: "/europe/:countryId",
       element: <EuropeCountries />,
     },
   ]);
