@@ -15,7 +15,7 @@ const EuropeCountries = () => {
       .then((data) => {
         console.log(data);
         setCountry(data[0]);
-        setLoading(false)
+        setLoading(false);
       })
       .catch((error) => console.error(error));
   };
@@ -26,22 +26,21 @@ const EuropeCountries = () => {
   }, []);
   return (
     <div className="container">
-    {loading ? (
-      "Loading..."
-    ) : country ? (
-      <div>
-        <h1>{country.name.common}</h1>
-        <img
-          src={country.flags.png}
-          alt={`flag of ${country.name.common}`}
-        />
-        <h2>Capital city</h2>
-        <div>Capital city of {country.name.common}is {country.capital}</div>
-      </div>
-    ) : (
-      <div>Ne postoji država s glavnim gradom {countryId}</div>
-    )}
-  </div>
+      {loading ? (
+        "Loading..."
+      ) : country ? (
+        <div>
+          <h1>{country.name.common}</h1>
+          <img src={country.flags.png} alt={`flag of ${country.name.common}`} />
+          <h2>Capital city</h2>
+          <div>
+            Capital city of {country.name.common}is {country.capital}
+          </div>
+        </div>
+      ) : (
+        <div>Ne postoji država s glavnim gradom {countryId}</div>
+      )}
+    </div>
   );
 };
 

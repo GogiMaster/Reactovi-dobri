@@ -1,5 +1,8 @@
 import Header from "./components/header";
 //pages
+import Brewary from "./pages/brewary";
+import EuropeCountries from "./pages/europe-countries";
+import Europe from "./pages/europe";
 import Exe from "./pages/exe";
 import Fave from "./pages/fave";
 import Funkcije from "./pages/funkcije";
@@ -7,18 +10,16 @@ import Home from "./pages/home";
 import Ispit from "./pages/ispit";
 import Mlinar from "./pages/mlinar";
 import Petlje from "./pages/petlj";
+import Pokemon from "./pages/pokemons";
 import Teorem from "./pages/teorem";
 import Varijable from "./pages/varijable";
 import Vjezba2804 from "./pages/vjezba2804";
+import Vjezba0305 from "./pages/vjezba0305";
 
 //nesto
 import "./styles/styles.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Vjezba0305 from "./pages/vjezba0305";
-import Brewary from "./pages/brewary";
-import Pokemon from "./pages/pokemons";
-import Europe from "./pages/europe";
-import EuropeCountries from "./pages/europe-countries";
+import Chat from "./pages/chat";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -81,6 +82,10 @@ const App = () => {
     {
       path: "/europe/:countryId",
       element: <EuropeCountries />,
+    },
+    {
+      path: "/chat",
+      element: <Chat />,
     },
   ]);
 
