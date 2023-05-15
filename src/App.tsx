@@ -20,6 +20,7 @@ import Vjezba0305 from "./pages/vjezba0305";
 import "./styles/styles.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Chat from "./pages/chat";
+import Vjezba1505 from "./pages/debug";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -86,6 +87,10 @@ const App = () => {
     {
       path: "/chat",
       element: <Chat />,
+    },
+    {
+      path: "/debug",
+      element: <Vjezba1505 />,
     },
   ]);
 

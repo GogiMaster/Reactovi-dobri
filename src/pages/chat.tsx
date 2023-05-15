@@ -2,7 +2,7 @@ import { useState } from "react";
 
 type Message = {
   content: string;
-  area:number;
+  area: string;
 };
 
 const Chat = () => {
@@ -13,7 +13,7 @@ const Chat = () => {
     if (input) {
       const newMessage: Message = {
         content: input,
-        area:NaN,
+        area: "",
       };
       setMessages([...messages, newMessage]);
       setInput("");
@@ -25,7 +25,11 @@ const Chat = () => {
       <div className="chat">
         <div className="chat__screen">
           {messages.map((mess) => {
-            return <div key={mess.area} className="chat__screen__text">{mess.content}</div>;
+            return (
+              <div key={mess.area} className="chat__screen__text">
+                {mess.content}
+              </div>
+            );
           })}
         </div>
         <div className="chat__input">
