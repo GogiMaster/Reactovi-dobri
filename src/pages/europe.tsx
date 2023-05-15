@@ -96,10 +96,10 @@ const Europe = () => {
                       </a>
                     </td>
                     <td>
-                      <img src={country.flags.png} alt="zastava" />{" "}
+                      <img src={country.flags.png} alt="zastava" />
                     </td>
                     <td>
-                      {" "}
+                      
                       <a href={country.maps.googleMaps}>Google Maps</a>
                     </td>
                     <td>{country.capital}</td>
