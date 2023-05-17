@@ -16,32 +16,11 @@
       width: 10rem;
       border: 1px solid $black;
       padding: 0.5rem;
+      
     }
 
     &__row {
       display: flex;
     }
-  }
-}
-
-@keyframes arm {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(10deg);
-  }
-}
-.vinl {
-  position: relative;
-  width: 10rem;
-  border: 1px solid;
-  &__arm {
-    width: 10rem;
-    top: calc(10% - 20px);
-    right: calc(10% - 20px);
-    position: absolute;
-    animation: arm 0.5s linear infinite alternate;
-    transition: all ease 250ms;
   }
 }

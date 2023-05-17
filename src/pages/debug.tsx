@@ -14,9 +14,11 @@ const Vjezba1505 = () => {
 
   //3. Funkcija koja treba u konzolu ispisati brojeve od 1 do 10
   const countToTen = () => {
+    let broj = []
     for (let i = 0; i < 11; i++) {
-      console.log(i); //
+     broj.push(<span>{i+', '}</span>)
     }
+    return broj
   };
 
   //4. Funkcija koja zbraja sve broojeve iz array-a
@@ -41,7 +43,7 @@ const Vjezba1505 = () => {
   };
 
   const getFullName = () => {
-    return user; //
+    return <div>{user.firstName} {user.latName}</div>; //
   };
 
   getFullName();
@@ -84,16 +86,37 @@ const Vjezba1505 = () => {
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     return arr.filter((num) => {
       if (num % 2 === 0) {
-        return num;
+        return num ;
       }
     });
   };
 
   useEffect(() => {
     //Ovdje možemo pokretati funkciju koju testiramo
-    console.log(fibonacciSequence(12));
+    console.log(isPalindrome('oko'));
   }, []);
-  return <div className="container"></div>;
+  return <div className="container">
+    <h1>1.</h1>
+    <div>{add(1,1)}</div> <hr />
+    <h1>2.</h1>
+    <div>{concatArrays()}</div><hr />
+    <h1>3.</h1>
+    <div>{countToTen()}</div><hr />
+    <h1>4.</h1>
+    <div>{sumArray()}</div><hr />
+    <h1>5.</h1>
+    <div>{getFullName()}</div><hr />
+    <h1>6.</h1>
+    <div>{celsiusToFahrenheit(30)} Fr</div><hr />
+    <h1>7.</h1>
+    <div>{reverseString('kamen')} </div><hr />
+    <h1>8.</h1>
+    <div>{isPalindrome('oko').toString()} </div><hr />
+    <h1>9.</h1>
+    <div>{fibonacciSequence(12)} </div><hr />
+    <h1>10.</h1>
+    <div>{filterEvenNumbers() + ' '} </div><hr />
+  </div>;
 };
 
 export default Vjezba1505;

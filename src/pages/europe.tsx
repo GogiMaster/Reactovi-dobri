@@ -3,6 +3,7 @@ import icon from "../assets/Images/person-icon.svg";
 import rightSide from "../assets/Images/right-side.svg";
 import leftSide from "../assets/Images/left-side.svg";
 import arm from "../assets/Images/arm.svg";
+
 export type CountryType = {
   name: CountryNameType;
   currencies: CurenciesType;
@@ -14,6 +15,8 @@ export type CountryType = {
   population: number;
   borders: string;
   car: CountryCars;
+  capitalInfo:ZemljaType
+   
 };
 
 type CurenciesType = {
@@ -39,6 +42,9 @@ type CountryCars = {
   side: string;
   [signs: string]: string;
 };
+type ZemljaType={
+  [latIng:string]:number
+}
 
 const Europe = () => {
   const [country, setCountry] = useState<CountryType[] | null>(null);
@@ -57,12 +63,15 @@ const Europe = () => {
       })
       .catch((error) => console.error(error));
   };
+  
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    
+  }, []);
   return (
     <>
       <div className="container">
-        <h1>Search Continent of: {searchValue}</h1>
+       <h1>Search Continent of: {searchValue}</h1>
         <input
           placeholder="Search Continent"
           type="text"
@@ -138,7 +147,11 @@ const Europe = () => {
                     </td>
                     <td>
                       <div>
-                        <div>{country.borders + ", "}</div>;
+                        {Object.keys(country.capitalInfo).map((key:any)=>{
+                          return <div key={key
+                          }>{country.capitalInfo[key]}</div>
+                        })}
+                        
                       </div>
                     </td>
                   </tr>
