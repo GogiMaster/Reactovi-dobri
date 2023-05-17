@@ -1,0 +1,65 @@
+.list {
+  border: 1px solid;
+  height: 100vh;
+  padding: 5rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 4rem;
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.3rem;
+      border-radius: 1rem;
+      background-color: $orange;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  &__card {
+    font-size: 1.5rem;
+    height: 40vh;
+    border: 1px solid;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $purple;
+    color: $white;
+
+    button {
+      background-color: $yellow;
+      margin: 0.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .content {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

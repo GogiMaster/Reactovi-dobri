@@ -54,6 +54,9 @@ const Header = () => {
           <div className="header__aside__nav--text">
             <a href="/debug">DEBUG</a>
           </div>
+          <div className="header__aside__nav--text">
+            <a href="/toDoList">TO DO LIST</a>
+          </div>
         </div>
       </div>
     </header>

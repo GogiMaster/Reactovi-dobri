@@ -21,7 +21,7 @@ import "./styles/styles.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Chat from "./pages/chat";
 import Vjezba1505 from "./pages/debug";
-import { test, expect } from '@playwright/test';
+import ToDoList from "./pages/toDoList";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -92,6 +92,10 @@ const App = () => {
     {
       path: "/debug",
       element: <Vjezba1505 />,
+    },
+    {
+      path: "/toDoList",
+      element: <ToDoList />,
     },
   ]);
 
