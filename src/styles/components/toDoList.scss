@@ -1,13 +1,28 @@
 .list {
   border: 1px solid;
-  height: 100vh;
   padding: 5rem;
-
+  
+  
   &__header {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: 4rem;
+
+    img{
+      border-radius:0rem ;
+      width: 8%;
+      padding: .1rem;
+      cursor: pointer;
+      border: 1px solid $grey;
+    }
+    
+    input{
+      border: none;
+      outline: none;
+      text-align: center;
+      font-size: 1.5rem;
+    }
 
     button {
       padding: 1rem 2rem;
@@ -30,7 +45,6 @@
 
   &__card {
     font-size: 1.5rem;
-    height: 40vh;
     border: 1px solid;
     border-radius: 1rem;
     padding: 2rem;
@@ -39,6 +53,14 @@
     align-items: center;
     background-color: $purple;
     color: $white;
+    width: 100%;
+    
+    &__header{
+      &__section{
+        display: flex;
+        justify-content: space-around;
+      }
+    }
 
     button {
       background-color: $yellow;
@@ -59,7 +81,21 @@
 
       .content {
         margin-right: 1rem;
+        display: flex;
+        justify-content: space-between;
+        width: 20rem;
+        align-items: center;
+        margin: .4rem;
+        padding: .5rem;
+        border-radius:1rem ;
+        cursor: pointer;
+        border: 1px solid $white;
       }
     }
   }
+}
+.trash{
+
+  width: 15%;
+  cursor: pointer;
 }
