@@ -22,6 +22,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Chat from "./pages/chat";
 import Vjezba1505 from "./pages/debug";
 import ToDoList from "./pages/toDoList";
+import JavaIspit from "./pages/Java.ispit";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -96,6 +97,10 @@ const App = () => {
     {
       path: "/toDoList",
       element: <ToDoList />,
+    },
+    {
+      path: "/javaIspit",
+      element: <JavaIspit />,
     },
   ]);
 

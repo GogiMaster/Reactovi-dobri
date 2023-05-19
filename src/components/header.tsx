@@ -57,6 +57,9 @@ const Header = () => {
           <div className="header__aside__nav--text">
             <a href="/toDoList">TO DO LIST</a>
           </div>
+          <div className="header__aside__nav--text">
+            <a href="/javaIspit">JAVA ISPIT</a>
+          </div>
         </div>
       </div>
     </header>
