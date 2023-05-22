@@ -17,7 +17,7 @@ const Card = ({
     <div>
       a
       <>
-        a
+        abbababab
         <div className="cards">
           a{img}
           <div className="cards__main">
@@ -25,13 +25,13 @@ const Card = ({
             <p className="cards__main__p">{desc}</p>a
           </div>
           <div className="cards__fotter">
-            a
+            abababa
             <Button value="OK" />
             <Button color="green" value="Cancel" />a
           </div>
           sa main slike
         </div>
-        a
+        baba abababa
       </>
     </div>
   );
