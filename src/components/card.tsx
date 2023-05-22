@@ -15,20 +15,23 @@ const Card = ({
 }: CardProps) => {
   return (
     <div>
+      a
       <>
+        abbababab
         <div className="cards">
-          {img}
+          a{img}
           <div className="cards__main">
-            <h1>{title}</h1>
-            <p className="cards__main__p">{desc}</p>
+            a<h1>{title}</h1>
+            <p className="cards__main__p">{desc}</p>a
           </div>
           <div className="cards__fotter">
+            abababa
             <Button value="OK" />
-            <Button color="green" value="Cancel" />
+            <Button color="green" value="Cancel" />a
           </div>
           sa main slike
         </div>
-        vyvy
+        baba abababa
       </>
     </div>
   );
