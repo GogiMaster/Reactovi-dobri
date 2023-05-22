@@ -28,6 +28,7 @@ const Card = ({
           </div>
           sa main slike
         </div>
+        vyvy
       </>
     </div>
   );
