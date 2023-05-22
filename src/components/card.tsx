@@ -18,7 +18,6 @@ const Card = ({
       <>
         <div className="cards">
           {img}
-
           <div className="cards__main">
             <h1>{title}</h1>
             <p className="cards__main__p">{desc}</p>
@@ -27,6 +26,7 @@ const Card = ({
             <Button value="OK" />
             <Button color="green" value="Cancel" />
           </div>
+          sa main slike
         </div>
       </>
     </div>
