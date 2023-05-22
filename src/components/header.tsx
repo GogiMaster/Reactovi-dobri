@@ -1,6 +1,7 @@
 import logo from "../assets/Images/LEGO_logo.svg.webp";
 
 const Header = () => {
+  let a = 3;
   return (
     <header className="header">
       <img className="header__logo" src={logo} />
