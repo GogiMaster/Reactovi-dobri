@@ -35,6 +35,8 @@ const JavaIspit = () => {
   };
   useEffect(() => {}, []);
 
+  const testGit = 2121212;
+
   return (
     <div className="container">
       <div className="java">
