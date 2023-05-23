@@ -23,6 +23,7 @@ import Chat from "./pages/chat";
 import Vjezba1505 from "./pages/debug";
 import ToDoList from "./pages/toDoList";
 import JavaIspit from "./pages/Java.ispit";
+import Timer from "./pages/timer";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -101,6 +102,10 @@ const App = () => {
     {
       path: "/javaIspit",
       element: <JavaIspit />,
+    },
+    {
+      path: "/timer",
+      element: <Timer />,
     },
   ]);
 

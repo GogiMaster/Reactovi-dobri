@@ -4,7 +4,7 @@ const Header = () => {
   let b = 31;
   return (
     <header className="header">
-      <img className="header__logo" src={logo} />
+      {/* <img className="header__logo" src={logo} /> */}
       <div className="header__aside">
         <div className="header__aside__nav">
           <div className="header__aside__nav--text">
@@ -60,6 +60,9 @@ const Header = () => {
           </div>
           <div className="header__aside__nav--text">
             <a href="/javaIspit">JAVA ISPIT</a>
+          </div>
+          <div className="header__aside__nav--text">
+            <a href="/timer">TIMER</a>
           </div>
         </div>
       </div>
