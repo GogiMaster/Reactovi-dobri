@@ -55,7 +55,10 @@ useEffect(() => {
          ):(
              
              <div className="container">
+                <h1 className="timer__title">Do kraja tečaja</h1>
+
         <div className="timer">
+                <div className="border">
             <div className="timer__section">
                 <span className="timer__counter">{days}</span>
                 <h1 className="timer__label">Days</h1>
@@ -76,7 +79,7 @@ useEffect(() => {
                 <span className="timer__counter">{seconds}</span>
                 <h1 className="timer__label">Seconds</h1>
             </div>
-            
+        </div>
         </div>
     </div>
          )}

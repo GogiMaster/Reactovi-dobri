@@ -18,13 +18,13 @@ const Exe = () => {
       <div className="container">
         <div className="container__item">
           <h1>Input</h1>
-          <Input />
-          <Input validation="bobobo" />
-          <Input rounded />
+          <Input placehold='da'/>
+          <Input validation="Ima nečeg" />
+          <Input rounded label='OVO JE LEJBL'/>
           <hr />
           <h1>BUTTON</h1>
-          <Button animate={true} value="KLIK" />
-          <Button animate={true} icon={<IconEdit />} color="red" />
+          <Button animate={true} value="KLIKANJE" />
+          <Button animate={true} icon={<IconEdit />} color="yellow" />
         </div>
         <hr />
         <div className="container__item">

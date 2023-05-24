@@ -2,14 +2,16 @@ type InputProps = {
   rounded?: boolean;
   label?: string;
   validation?: string;
+  placehold?:string;
 };
 
-const Input = ({ rounded, label, validation }: InputProps) => {
+const Input = ({ rounded, label, validation, placehold }: InputProps) => {
   return (
     <>
       {label ? <label htmlFor={label}>{label}</label> : ""}
 
       <input
+      placeholder={placehold}
         id={label}
         className={`input ${rounded ? "input--rounded input--focused" : ""}`}
       />
