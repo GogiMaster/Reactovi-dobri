@@ -24,6 +24,7 @@ import Vjezba1505 from "./pages/debug";
 import ToDoList from "./pages/toDoList";
 import JavaIspit from "./pages/Java.ispit";
 import Timer from "./pages/timer";
+import Band from "./pages/band";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -106,6 +107,10 @@ const App = () => {
     {
       path: "/timer",
       element: <Timer />,
+    },
+    {
+      path: "/band",
+      element: <Band />,
     },
   ]);
 

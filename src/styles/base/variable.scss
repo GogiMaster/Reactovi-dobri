@@ -12,6 +12,14 @@ $purple: #5c3ee8;
 //Font
 $font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 $net: "Delicious Handrawn", cursive;
+$black-grad: linear-gradient(
+  to bottom,
+  #010409,
+  #14191a,
+  #202727,
+  #303733,
+  #44463f
+);
 
 //breakpoints
 $media-sm: 27.5em; //680 px

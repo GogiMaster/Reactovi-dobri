@@ -64,6 +64,9 @@ const Header = () => {
           <div className="header__aside__nav--text">
             <a href="/timer">TIMER</a>
           </div>
+          <div className="header__aside__nav--text">
+            <a href="/band">BAND SONGS</a>
+          </div>
         </div>
       </div>
     </header>
