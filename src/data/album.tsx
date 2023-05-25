@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AlbumType, band, SongType } from "../data/bands";
+import { SongType } from "../data/bands";
 
 
 
@@ -8,11 +8,12 @@ const Album = ({ album }: { album: SongType[] }) => {
     const toggleModal = () => {
     setModal(!modal);
   };
+  
   return (
     <>
     {modal ? (
 
-      <div className={`band__album__list`}>
+      <div onClick={toggleModal} className={`band__album__list`}>
         {album
           ? album.map((song) => {
               return (
@@ -24,7 +25,7 @@ const Album = ({ album }: { album: SongType[] }) => {
           : "nema aktivnih pjesama"}
       </div>
     ):('')}
-      <button onClick={toggleModal} className="btn">Show Songs</button>
+      <button onClick={toggleModal} className={`btn btn--${modal ? 'hidden':'none'}`}>Show Songs</button>
     </>
   );
 };

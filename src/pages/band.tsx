@@ -1,25 +1,18 @@
 import { useState } from "react";
 import Album from "../data/album";
-import { AlbumType, band } from "../data/bands";
+import { band } from "../data/bands";
+import close from '../assets/close.svg'
 
 const Band = () => {
   const [modal, setModal] = useState<boolean>(false);
-  const [activeAlbum, setActiveAlbum] = useState<AlbumType | null>(null);
 
   const toggleModal = () => {
     setModal(!modal);
   };
 
-  const handleActiveAlbum = (id: number) => {
-    band.forEach((album) => {
-      if (album.id === id) {
-        setActiveAlbum(album);
-      }
-    });
-  };
-
+ 
   return (
-    <div className="container">
+    <div className="container--dark">
       <div className="band">
         <h1>Aerosmith</h1>
         <img
@@ -32,12 +25,13 @@ const Band = () => {
         <div>
           {modal ? (
             <>
+              
               <div className="modal__overlay" onClick={toggleModal}></div>
               <div className="band__album">
+              <img onClick={toggleModal} className="band__album__close" src={close} alt="X" />
                 {band.map((album) => {
                   return (
                     <div
-                      onClick={() => handleActiveAlbum(album.id)}
                       className="band__album__card"
                     >
                       <img
