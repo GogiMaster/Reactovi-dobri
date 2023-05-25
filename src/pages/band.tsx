@@ -48,6 +48,7 @@ const Band = () => {
                       <h1>{album.name}</h1>
                       <h2>{album.released}</h2>
                       <Album album={album.songs} />
+                      
                     </div>
                   );
                 })}
