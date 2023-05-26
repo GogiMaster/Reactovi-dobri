@@ -21,7 +21,7 @@ const Band = () => {
           src="https://i1.sndcdn.com/avatars-000015409824-2azglo-t500x500.jpg"
           alt="Aerosmith"
         />
-        <button onClick={toggleModal}>See Albums</button>
+        <button className="btn" onClick={toggleModal}>See Albums</button>
         <div>
           {modal ? (
             <>
@@ -31,7 +31,7 @@ const Band = () => {
               <img onClick={toggleModal} className="band__album__close" src={close} alt="X" />
                 {band.map((album) => {
                   return (
-                    <div
+                    <div key={album.id}
                       className="band__album__card"
                     >
                       <img

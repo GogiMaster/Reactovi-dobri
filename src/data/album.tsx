@@ -17,15 +17,21 @@ const Album = ({ album }: { album: SongType[] }) => {
         {album
           ? album.map((song) => {
               return (
-                <div>
-                  {song.name} <hr />{" "}
+                <div key={song.id
+                }>
+                  <a className="band__album__link" href={song.link} target="_blank">
+                  {song.name} 
+                  </a>
+                  <hr />{" "}
                 </div>
               );
             })
           : "nema aktivnih pjesama"}
       </div>
     ):('')}
+    
       <button onClick={toggleModal} className={`btn btn--${modal ? 'hidden':'none'}`}>Show Songs</button>
+   
     </>
   );
 };
