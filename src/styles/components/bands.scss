@@ -1,10 +1,15 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
 .band {
   border: 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: $black-grad;
-  height: 88vh;
 
   button {
     padding: 1rem 2rem;
@@ -16,7 +21,6 @@
   }
 
   &__album {
-    
     border: 1px solid;
     background-image: $black-grad;
     position: absolute;
@@ -31,9 +35,8 @@
     height: 85vh;
     overflow: hidden;
     overflow-y: scroll;
-    
 
-    &__close{
+    &__close {
       cursor: pointer;
       background-color: white;
       width: 5rem;
@@ -41,8 +44,7 @@
       right: 0;
       top: 0;
       transition: all 250ms ease;
-      &:hover{
-       
+      &:hover {
         border-radius: 5rem;
       }
     }
@@ -58,50 +60,50 @@
       position: relative;
       text-align: center;
       z-index: 1;
-
     }
 
-    &__link{
+    &__link {
       color: $white;
       text-decoration: none;
     }
 
     &__list {
       position: absolute;
-        padding: 1.4rem;
-        font-size: 1.5rem;
-        text-align: center;
-        
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        
-        background-image: $black-grad;
+      padding: 1.4rem;
+      font-size: 1.5rem;
+      text-align: center;
+
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      background-image: $black-grad;
     }
   }
 }
 
-.btn{
+.btn {
   z-index: 0;
-  
-  &--hidden{
+
+  &--hidden {
     z-index: -1;
   }
 
-  &--none{
+  &--none {
     display: block;
   }
 }
-.cover{
+.cover {
   border: 2px solid $white;
+  width: 300px;
 }
 
 //Scrool bar
-  .band__album{
-    scrollbar-width: auto;
-    scrollbar-color: #434144 #252323;
-    
+.band__album {
+  scrollbar-width: auto;
+  scrollbar-color: #434144 #252323;
+
   &::-webkit-scrollbar {
     width: 16px;
   }
@@ -115,4 +117,17 @@
     border-radius: 10px;
     border: 3px solid #ffffff;
   }
+}
+.absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 50%;
+  width: 2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.parent {
+  position: relative;
 }
