@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SongType } from "./bands";
 import star from "../assets/star.svg";
 import { FavoriteSongs } from "../pages/band-list";
+import { Favorite } from "./favorite_button";
 
 type SongProps = {
   album: SongType[];
@@ -39,8 +40,8 @@ const Songs = ({ album, onFavorite }: SongProps) => {
                       >
                         {song.name}
                       </a>
-                      <div className="absolute">
-                        <img src={star} onClick={() => onFavorite(song)} />
+                      <div onClick={() => onFavorite(song)} className="absolute">
+                        <Favorite/>
                       </div>
                     </div>
                     <hr />

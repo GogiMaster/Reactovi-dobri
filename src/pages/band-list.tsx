@@ -5,6 +5,7 @@ import { band, SongType } from "../data/bands";
 export const FavoriteSongs = ["ZA sad prazno"];
 const BandList = () => {
   const [favoriteSongs, setFavoriteSongs] = useState<SongType[]>([]);
+
   const hanleFavorite = (song: SongType) => {
     const isPresent = favoriteSongs.find((item) => item.id === song.id);
     if (isPresent) {
@@ -17,11 +18,8 @@ const BandList = () => {
   return (
     <div className="container--dark">
       <div>
-        <h1>Favorite songs</h1>
-        {favoriteSongs.map((item) => {
-          return <div className="favorite">{item.name}</div>;
-        })}
-      </div>
+       
+        
       <div className="list">
         {band.map((currentBand) => {
           return (
@@ -31,6 +29,14 @@ const BandList = () => {
             />
           );
         })}
+        </div>
+        <h1>Favorite songs</h1>
+        <div className="favorite">
+          
+        {favoriteSongs.map((item) => {
+          return <div  >{item.name} <hr /></div>;
+        })}
+      </div>
       </div>
     </div>
   );
