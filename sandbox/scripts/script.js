@@ -140,3 +140,12 @@ room.light();
 console.log(room.povrsina);
 console.log(room.volumen);
 room.switch();
+
+//jquery
+var numer = 0;
+$(document).ready(function () {
+  $(".jquery-btn").click(function () {
+    numer++;
+    $(".jquery-span").text(numer);
+  });
+});
