@@ -26,6 +26,7 @@ import JavaIspit from "./pages/Java.ispit";
 import Timer from "./pages/timer";
 import Band from "./data/band";
 import BandList from "./pages/band-list";
+import Bootstrap from "./pages/bootstrap";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -112,6 +113,10 @@ const App = () => {
     {
       path: "/band",
       element: <BandList />,
+    },
+    {
+      path: "/bootstrap",
+      element: <Bootstrap />,
     },
   ]);
 

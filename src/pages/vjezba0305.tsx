@@ -11,7 +11,7 @@ const Vjezba0305 = () => {
   //2. dodamo dodatnu klasu na box koja će povecati njegove dimenzije
   box.classList.add("boxing");
   //3.  animiramo box do 30px i nazad (kroz JS)
-
+  //gg
   const frame = () => {
     if (reverse) {
       position--;

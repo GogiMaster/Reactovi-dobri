@@ -1,0 +1,23 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  height: 30rem;
+  justify-content: space-between;
+  position: relative;
+
+  &__img {
+    width: 5rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 3rem;
+  }
+  &__grass {
+    height: 25rem;
+  }
+  &__finish {
+    width: 4rem;
+    position: absolute;
+    bottom: 4rem;
+    right: 3rem;
+  }
+}

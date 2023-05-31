@@ -2,11 +2,11 @@
   margin: 0 auto;
   max-width: 1300px;
   padding: 0 1rem;
+  margin-top: 30vh;
 
   &--dark {
     background-image: $black-grad;
     color: $white;
-    margin-top: -3rem;
-    
+    margin-top: 3rem;
   }
 }
