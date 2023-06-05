@@ -28,6 +28,7 @@ import Band from "./data/band";
 import BandList from "./pages/band-list";
 import Bootstrap from "./pages/bootstrap";
 import Game from "./pages/game";
+import Instagram from "./components/INSTAGRAM/instagram";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -118,6 +119,10 @@ const App = () => {
     {
       path: "/bootstrap",
       element: <Game />,
+    },
+    {
+      path: "/instagram",
+      element: <Instagram />,
     },
   ]);
 

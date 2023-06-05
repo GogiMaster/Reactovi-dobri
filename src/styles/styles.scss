@@ -1,13 +1,13 @@
 //base
 @import "./base/variable.scss";
 @import "./base/base.scss";
+@import "./base/container.scss";
 //components
 @import "./components/bands.scss";
 @import "./components/button.scss";
 @import "./components/checkbox.scss";
 @import "./components/chat.scss";
 @import "./components/card.scss";
-@import "./components/container.scss";
 @import "./components/europe.scss";
 @import "./components/fave.scss";
 @import "./components/form-field.scss";
@@ -27,5 +27,6 @@
 @import "./components/toDoList.scss";
 @import "./components/timer.scss";
 @import "./components/bootstrap.scss";
+@import "./components/instagram.scss";
 //bootstrap
 //@import "node_modules/bootstrap/scss/bootstrap";

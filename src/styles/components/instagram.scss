@@ -1,0 +1,29 @@
+.instagram {
+  display: flex;
+
+  &__post {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__bar {
+      border: 1px solid;
+      height: 3rem;
+      background-color: rgb(126, 40, 40);
+    }
+  }
+
+  &__profile {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__bar {
+    display: flex;
+    padding: 2rem;
+  }
+}

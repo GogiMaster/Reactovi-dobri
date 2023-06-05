@@ -68,7 +68,10 @@ const Header = () => {
             <a href="/band">BAND SONGS</a>
           </div>
           <div className="header__aside__nav--text">
-            <a href="/bootstrap">BOOTSTRAP</a>
+            <a href="/bootstrap">GAME</a>
+          </div>
+          <div className="header__aside__nav--text">
+            <a href="/instagram">INSTAGRAM</a>
           </div>
         </div>
       </div>
