@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 const Game = () => {
     const [finish,setFinish]=useState<boolean>(false)
-    const [winner,setWinner]=useState<boolean>(false)
+    const [winner,setWinner]=useState<string>('')
 
-    const handleKeyPress=(event:React.KeyboardEvent)=> {   
+    const handleKeyPress=(event:KeyboardEvent)=> {   
         if (event.code === "Space") {
           movePlayer("playerOne");
         } else if (event.code === "ArrowRight") {
@@ -22,7 +22,7 @@ const Game = () => {
         if(player.style.left === 1200 + 'px'){
             player.style.left = 1200 + 'px';
           setFinish(true)
-          setWinner(id === 'playerOne' ? ( <span>Player One</span> ):('Player Two'))
+          setWinner(id === 'playerOne' ? ('Player One'):('Player Two'))
         }
         
          if (player.style.left>=1150+'px') {
@@ -34,6 +34,7 @@ const Game = () => {
       };
 
       const handleReset=()=>{
+        setWinner('')
             setFinish(false)
             const playerOne = document.querySelector(`#playerOne`) as HTMLElement;
             const playerTwo = document.querySelector(`#playerTwo`) as HTMLElement;
