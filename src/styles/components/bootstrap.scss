@@ -10,6 +10,7 @@
     position: absolute;
     bottom: 4rem;
     left: 0;
+    z-index: 1;
   }
   &__grass {
     height: 25rem;
@@ -19,5 +20,22 @@
     position: absolute;
     bottom: 4rem;
     right: 0;
+    z-index: 0; 
+   }
+
+  &__modal{
+    background-color: $white;
+    margin: 0 auto;
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    z-index: 2;
   }
 }

@@ -27,6 +27,7 @@ import Timer from "./pages/timer";
 import Band from "./data/band";
 import BandList from "./pages/band-list";
 import Bootstrap from "./pages/bootstrap";
+import Game from "./pages/game";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -116,7 +117,7 @@ const App = () => {
     },
     {
       path: "/bootstrap",
-      element: <Bootstrap />,
+      element: <Game />,
     },
   ]);
 
