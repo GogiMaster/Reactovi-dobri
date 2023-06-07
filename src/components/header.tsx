@@ -73,6 +73,9 @@ const Header = () => {
           <div className="header__aside__nav--text">
             <a href="/instagram">INSTAGRAM</a>
           </div>
+          <div className="header__aside__nav--text">
+            <a href="/kalkulator">KALKULATOR</a>
+          </div>
         </div>
       </div>
     </header>

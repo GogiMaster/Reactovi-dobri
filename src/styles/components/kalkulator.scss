@@ -1,0 +1,44 @@
+.calc{
+    border: 1px solid;
+    padding: 2rem;
+    background-color: grey;
+
+    &__display{
+        background-color: rgb(228, 238, 238);
+        padding: 1rem;
+        margin-bottom: 5rem;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-between;
+
+        &__top{
+            color: rgb(135, 194, 47);
+            padding: .9rem;
+        }
+        &__bot{
+            padding: .9rem;
+        }
+    }
+
+    &__buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+
+        &__btn{
+            background-color: rgb(182, 180, 180);
+            padding: 1rem;
+            text-align: center;
+            font-size: 2rem;
+            color:white;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover{
+                opacity: .5;
+            }
+        }
+    }
+}

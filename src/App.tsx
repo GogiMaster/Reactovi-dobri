@@ -29,6 +29,7 @@ import BandList from "./pages/band-list";
 import Bootstrap from "./pages/bootstrap";
 import Game from "./pages/game";
 import Instagram from "./components/INSTAGRAM/instagram";
+import Kalkulator from "./components/KALKILATOR/kalkulator";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -122,7 +123,11 @@ const App = () => {
     },
     {
       path: "/instagram",
-      element: <Instagram />,
+      element: <Instagram/>,
+    },
+    {
+      path: "/kalkulator",
+      element: <Kalkulator/>,
     },
   ]);
 

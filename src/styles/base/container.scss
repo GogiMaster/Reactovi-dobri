@@ -9,4 +9,11 @@
     color: $white;
     margin-top: 3rem;
   }
+
+  &--sm{
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+  }
 }

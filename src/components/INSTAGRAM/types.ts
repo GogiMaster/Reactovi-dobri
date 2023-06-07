@@ -1,7 +1,7 @@
 export type PostType = {
-  id: number;
+  id: string;
   title: string;
-  description: "string";
+  description: string;
   hashtags: string[];
   img_url: string;
 };
